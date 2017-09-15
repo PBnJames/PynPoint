@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.pynpoint.TimerSetActivity"
+    android:background="@color/calmGreen">
+
+    <TextView
+        android:id="@+id/study_pattern_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:layout_x="164dp"
+        android:layout_y="56dp"
+        android:text="@string/study_pattern_title"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="22sp" />
+
+
+    <Spinner
+        android:id="@+id/study_pattern_spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_x="88dp"
+        android:layout_y="104dp"
+        android:entries="@array/study_pattern_list"
+        android:prompt="@string/study_pattern_prompt"
+        android:spinnerMode="dialog" />
+
+
+
+    <TextView
+        android:id="@+id/timer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="29dp"
+        android:layout_x="60dp"
+        android:layout_y="164dp"
+        android:text="@string/timer_title"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="22sp" />
+
+
+
+    <Spinner
+        android:id="@+id/interval_minute_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_x="257dp"
+        android:layout_y="351dp"
+        android:spinnerMode="dialog" />
+
+    <Spinner
+        android:id="@+id/interval_hour_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_x="263dp"
+        android:layout_y="321dp"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:id="@+id/interval_minute_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_x="148dp"
+        android:layout_y="360dp"
+        android:text="@string/minutes_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/interval_hour_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_x="157dp"
+        android:layout_y="323dp"
+        android:text="@string/hour_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/interval_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_x="202dp"
+        android:layout_y="281dp"
+        android:text="@string/interval_title"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/break_minute_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_x="315dp"
+        android:layout_y="242dp"
+        android:spinnerMode="dialog" />
+
+    <Spinner
+        android:id="@+id/break_hour_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_x="311dp"
+        android:layout_y="203dp"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:id="@+id/break_minute_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="218dp"
+        android:layout_y="248dp"
+        android:text="@string/minutes_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/break_hour_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_x="230dp"
+        android:layout_y="203dp"
+        android:text="@string/hour_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/break_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="291dp"
+        android:layout_y="166dp"
+        android:text="@string/break_title"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/timer_minute_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_x="3dp"
+        android:layout_y="251dp"
+        android:text="@string/minutes_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/timer_hour_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="14dp"
+        android:layout_x="15dp"
+        android:layout_y="209dp"
+        android:text="@string/hour_label"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/timer_minute_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_x="94dp"
+        android:layout_y="248dp"
+        android:spinnerMode="dialog" />
+
+    <Spinner
+        android:id="@+id/timer_hour_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_x="91dp"
+        android:layout_y="209dp"
+        android:spinnerMode="dialog" />
+
+
+    <Button
+        android:id="@+id/start_timer_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="127dp"
+        android:layout_x="168dp"
+        android:layout_y="472dp"
+        android:text="@string/start_button"
+        android:textSize="26sp" />
+
+</AbsoluteLayout>
