@@ -202,6 +202,6 @@
         android:layout_x="168dp"
         android:layout_y="472dp"
         android:text="@string/start_button"
-        android:textSize="26sp" />
+        android:textSize="27sp" />
 
 </AbsoluteLayout>
