@@ -13,9 +13,9 @@
 
 
     <style name="spinnerStyle">
-        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_width">215dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/spinnerBorder</item>
+        <item name="android:background">@drawable/spinner_border</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">20dp</item>
@@ -25,9 +25,9 @@
     </style>
 
     <style name="smallSpinnerStyle">
-        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/spinnerBorder</item>
+        <item name="android:background">@drawable/spinner_border</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">20dp</item>
         <item name="android:paddingTop">5dp</item>

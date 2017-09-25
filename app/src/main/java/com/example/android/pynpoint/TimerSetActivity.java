@@ -14,7 +14,12 @@ public class TimerSetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer_set);
-        setHourSpinner();
+        setSpinners(R.id.timer_hour_spinner, 17);
+        setSpinners(R.id.timer_minute_spinner, 60);
+        setSpinners(R.id.break_hour_spinner, 17);
+        setSpinners(R.id.break_minute_spinner, 60);
+        setSpinners(R.id.interval_hour_spinner, 17);
+        setSpinners(R.id.interval_minute_spinner, 60);
         toTimerStartActivity();
     }
 
@@ -29,15 +34,17 @@ public class TimerSetActivity extends AppCompatActivity {
         });
     }
 
-    private void setHourSpinner() {
-        Spinner hour_spinner=(Spinner) findViewById(R.id.timer_hour_spinner);
-        Integer[] items = new Integer[17];
+    private void setSpinners(int spinnerId, int numOfItems) {
+        Spinner hourSpinner=(Spinner) findViewById(spinnerId);
+        Integer[] items = new Integer[numOfItems];
         for(int i = 0; i < items.length; ++i){
             items[i] = i;
         }
         ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item, items);
-        hour_spinner.setAdapter(adapter);
+        hourSpinner.setAdapter(adapter);
     }
+
+
 
 
 }
