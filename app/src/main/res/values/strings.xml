@@ -11,7 +11,17 @@
     <string name="timer_title">Timer</string>
     <string name="break_title">Break</string>
     <string name="interval_title">Interval</string>
-
+    <string name="to_timer_button_label">Timer</string>
+    <string name="to_settings_button_label">Settings</string>
+    <string name="to_history_button_label">History</string>
+    <string name="to_profile_button_label">Profile</string>
+    <string name="to_shop_button_label">Shop</string>
+    <string name="timer_hour_prompt">Select timer length (hours)</string>
+    <string name="timer_minute_prompt">Select timer length (minutes)</string>
+    <string name="break_hour_prompt">Select break length (hours)</string>
+    <string name="break_minute_prompt">Select break length (minutes)</string>
+    <string name="interval_hour_prompt">Select interval length (hours)</string>
+    <string name="interval_minute_prompt">Select interval length (minutes)</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>
@@ -19,33 +29,4 @@
         <item>Optimized</item>
         <item>Custom</item>
     </string-array>
-
-    <string-array name="hours_array">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>11</item>
-        <item>11</item>
-        <item>11</item>
-        <item>11</item>
-
-    </string-array>
-
-    <string-array name="minutes_array">
-        <item>Standard</item>
-        <item>Rapidfire</item>
-        <item>Optimized</item>
-        <item>Custom</item>
-    </string-array>
-
-
 </resources>

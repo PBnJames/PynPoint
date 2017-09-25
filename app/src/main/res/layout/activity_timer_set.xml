@@ -68,6 +68,7 @@
         android:id="@+id/timer_hour_spinner"
         android:spinnerMode="dialog"
         style="@style/smallSpinnerStyle"
+        android:prompt="@string/timer_hour_prompt"
         android:layout_below="@id/timer_title"
         android:layout_toEndOf="@id/timer_hour_label"
         android:layout_toRightOf="@id/timer_hour_label"
@@ -79,6 +80,7 @@
         android:id="@+id/timer_minute_spinner"
         style="@style/smallSpinnerStyle"
         android:spinnerMode="dialog"
+        android:prompt="@string/timer_minute_prompt"
         android:layout_below="@id/timer_hour_spinner"
         android:layout_alignLeft="@id/timer_hour_spinner"
         android:layout_alignStart="@id/timer_hour_spinner"
@@ -133,6 +135,7 @@
         android:id="@+id/break_hour_spinner"
         style="@style/smallSpinnerStyle"
         android:spinnerMode="dialog"
+        android:prompt="@string/break_hour_prompt"
         android:layout_below="@id/break_title"
         android:layout_toRightOf="@id/break_hour_label"
         android:layout_toEndOf="@id/break_hour_label"
@@ -144,6 +147,7 @@
         android:id="@+id/break_minute_spinner"
         style="@style/smallSpinnerStyle"
         android:spinnerMode="dialog"
+        android:prompt="@string/break_minute_prompt"
         android:layout_below="@id/break_hour_spinner"
         android:layout_toRightOf="@id/break_minute_label"
         android:layout_toEndOf="@id/break_minute_label"
@@ -191,6 +195,7 @@
         android:id="@+id/interval_hour_spinner"
         style="@style/smallSpinnerStyle"
         android:spinnerMode="dialog"
+        android:prompt="@string/interval_hour_prompt"
         android:layout_below="@id/interval_title"
         android:layout_toEndOf="@id/interval_hour_label"
         android:layout_toRightOf="@id/interval_hour_label"
@@ -202,6 +207,7 @@
         android:id="@+id/interval_minute_spinner"
         style="@style/smallSpinnerStyle"
         android:spinnerMode="dialog"
+        android:prompt="@string/interval_minute_prompt"
         android:layout_below="@id/interval_hour_spinner"
         android:layout_alignLeft="@id/interval_hour_spinner"
         android:layout_alignStart="@id/interval_hour_spinner"
@@ -216,6 +222,53 @@
         android:layout_below="@id/interval_minute_spinner"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"/>
+
+    <Button
+        android:id="@+id/to_timer_button"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_timer_button_label"
+        android:textSize="@dimen/tiny_text_size"
+        android:layout_below="@id/start_timer_button"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="115dp"/>
+
+    <Button
+        android:id="@+id/to_settings_button"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_settings_button_label"
+        android:textSize="@dimen/tiny_text_size"
+        android:layout_alignTop="@+id/to_timer_button"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/to_timer_button"
+        android:layout_toRightOf="@+id/to_timer_button" />
+
+    <Button
+        android:id="@+id/to_history_button"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_history_button_label"
+        android:textSize="@dimen/tiny_text_size"
+        android:layout_alignTop="@+id/to_timer_button"
+        android:layout_toEndOf="@+id/to_settings_button"
+        android:layout_toRightOf="@+id/to_settings_button"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+
+    <Button
+        android:id="@+id/to_profile_button"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_profile_button_label"
+        android:textSize="@dimen/tiny_text_size"
+        android:layout_alignTop="@+id/to_timer_button"
+        android:layout_toEndOf="@+id/to_history_button"
+        android:layout_toRightOf="@+id/to_history_button"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
 
 
 </RelativeLayout>
