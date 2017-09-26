@@ -21,6 +21,15 @@ public class TimerSetActivity extends AppCompatActivity {
         setSpinners(R.id.interval_hour_spinner, 17);
         setSpinners(R.id.interval_minute_spinner, 60);
         toTimerStartActivity();
+
+        Button descriptionScreenButton = (Button)findViewById(R.id.to_settings_button);
+
+        descriptionScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TimerSetActivity.this, SettingsActivity.class));
+            }
+        });
     }
 
     private void toTimerStartActivity() {
