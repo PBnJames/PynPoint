@@ -9,9 +9,14 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+
     </style>
 
+    <style name="PreferenceScreen" parent="AppTheme">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:textColorPrimary">@color/antiFlashWhite</item>
+        <item name="android:textColorSecondary">@color/antiFlashWhite</item>
+        </style>
 
     <style name="spinnerStyle">
         <item name="android:layout_width">215dp</item>

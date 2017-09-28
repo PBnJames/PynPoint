@@ -19,7 +19,9 @@
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".TimerSetActivity" />
         <activity android:name=".TimerStartActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity"
+            android:theme="@style/PreferenceScreen">
+        </activity>
     </application>
 
 </manifest>
