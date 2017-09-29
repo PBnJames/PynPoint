@@ -22,6 +22,7 @@
     <string name="break_minute_prompt">Select break length (minutes)</string>
     <string name="interval_hour_prompt">Select interval length (hours)</string>
     <string name="interval_minute_prompt">Select interval length (minutes)</string>
+    <string name="settings_actionbar_label">Settings</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

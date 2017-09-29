@@ -20,7 +20,8 @@
         <activity android:name=".TimerSetActivity" />
         <activity android:name=".TimerStartActivity" />
         <activity android:name=".SettingsActivity"
-            android:theme="@style/PreferenceScreen">
+            android:theme="@style/PreferenceScreen"
+            android:label="@string/settings_actionbar_label">
         </activity>
     </application>
 
