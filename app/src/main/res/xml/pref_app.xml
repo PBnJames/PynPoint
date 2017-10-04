@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
         android:title="@string/settings_actionbar_label"
         android:layout="@layout/custom_pref_title_layout">
@@ -40,5 +41,12 @@
     <Preference android:title="About"
         android:key="about_button" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/activity_settings_button_layout"
+
+
+        ></PreferenceCategory>
+
 
 </PreferenceScreen>
