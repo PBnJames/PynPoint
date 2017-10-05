@@ -17,11 +17,14 @@ public class StartActivity extends AppCompatActivity {
 
     private void toDescriptionActivity() {
         Button startScreenButton = (Button)findViewById(R.id.start_screen_button);
+        final Intent intent = new Intent(this, DescriptionActivity.class);
 
         startScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(StartActivity.this, DescriptionActivity.class));
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }

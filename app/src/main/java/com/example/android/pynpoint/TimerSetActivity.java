@@ -21,24 +21,59 @@ public class TimerSetActivity extends AppCompatActivity {
         setSpinners(R.id.interval_hour_spinner, 17);
         setSpinners(R.id.interval_minute_spinner, 60);
         toTimerStartActivity();
+        toSettingsActivity();
+        toHistoryActivity();
+        toProfileActivity();
+    }
 
-        Button descriptionScreenButton = (Button)findViewById(R.id.to_settings_button);
-
-        descriptionScreenButton.setOnClickListener(new View.OnClickListener() {
+    private void toProfileActivity() {
+        Button profileScreenButton = (Button)findViewById(R.id.to_profile_button);
+        final Intent intent = new Intent(this, ProfileActivity.class);
+        profileScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TimerSetActivity.this, SettingsActivity.class));
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    private void toHistoryActivity() {
+        Button historyScreenButton = (Button)findViewById(R.id.to_history_button);
+        final Intent intent = new Intent(this, HistoryActivity.class);
+        historyScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    private void toSettingsActivity() {
+        Button settingsScreenButton = (Button)findViewById(R.id.to_settings_button);
+        final Intent intent = new Intent(this, SettingsActivity.class);
+        settingsScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
     private void toTimerStartActivity() {
-        Button descriptionScreenButton = (Button)findViewById(R.id.start_timer_button);
-
-        descriptionScreenButton.setOnClickListener(new View.OnClickListener() {
+        Button startScreenButton = (Button)findViewById(R.id.start_timer_button);
+        final Intent intent = new Intent(this, TimerStartActivity.class);
+        startScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TimerSetActivity.this, TimerStartActivity.class));
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }

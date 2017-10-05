@@ -17,11 +17,14 @@ public class DescriptionActivity extends AppCompatActivity {
 
     private void toTimerSetActivity() {
         Button descriptionScreenButton = (Button)findViewById(R.id.description_screen_button);
+        final Intent intent = new Intent(this, TimerSetActivity.class);
 
         descriptionScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DescriptionActivity.this, TimerSetActivity.class));
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }

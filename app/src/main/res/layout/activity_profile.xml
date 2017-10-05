@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.pynpoint.TimerStartActivity"
+    tools:context="com.example.android.pynpoint.ProfileActivity"
     android:background="@color/twitchPurple">
 
 </android.support.constraint.ConstraintLayout>
