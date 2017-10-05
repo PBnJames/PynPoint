@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/twitchPurple">
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
     <Button
         android:id="@+id/to_timer_button_settings"
@@ -10,9 +15,9 @@
         android:text="@string/to_timer_button_label"
         android:textSize="@dimen/tiny_text_size"
         android:textColor="@color/black"
-        android:layout_marginLeft="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="123dp"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="731dp"/>
 
     <Button
         android:id="@+id/to_settings_button_settings"

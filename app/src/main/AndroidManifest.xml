@@ -19,12 +19,9 @@
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".TimerSetActivity" />
         <activity android:name=".TimerStartActivity" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/settings_actionbar_label"
-            android:theme="@style/PreferenceScreen" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

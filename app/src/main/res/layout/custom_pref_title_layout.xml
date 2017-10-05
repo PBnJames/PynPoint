@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:textColor="@color/antiFlashWhite"
-        android:paddingBottom="20dp"/>
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"/>
 
 </LinearLayout>

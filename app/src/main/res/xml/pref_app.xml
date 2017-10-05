@@ -42,11 +42,4 @@
         android:key="about_button" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:layout="@layout/activity_settings_button_layout"
-
-
-        ></PreferenceCategory>
-
-
 </PreferenceScreen>
