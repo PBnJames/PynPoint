@@ -12,6 +12,7 @@ public class SettingsActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.PreferenceScreen);
         addPreferencesFromResource(R.xml.pref_app);
         setContentView(R.layout.activity_settings_button_layout);
         toProfileActivity();
