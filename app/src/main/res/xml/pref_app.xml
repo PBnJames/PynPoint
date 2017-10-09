@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory
-        android:title="@string/settings_actionbar_label"
-        android:layout="@layout/custom_pref_title_layout">
-    <CheckBoxPreference
-        android:title="Quit button enabled"
-        android:key="enable_quit_button"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:defaultValue="false" />
-    <CheckBoxPreference
-        android:title="Tutorial on Start"
-        android:key="enable_tutorial"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:defaultValue="false" />
-    <CheckBoxPreference
-        android:title="Hide Timer"
-        android:key="disable_timer"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:defaultValue="false" />
-    <CheckBoxPreference
-        android:title="Games Enabled"
-        android:key="enable_games"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:defaultValue="false" />
-    <CheckBoxPreference
-        android:title="Show Streaks"
-        android:key="enable_streaks"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:defaultValue="false" />
-    <Preference android:title="References"
-        android:key="reference_button" />
-    <Preference android:title="Tips"
-        android:key="tips_button" />
-    <Preference android:title="About"
-        android:key="about_button" />
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:title="Quit button enabled"
+            android:key="enable_quit_button"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="Tutorial on Start"
+            android:key="enable_tutorial"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="Hide Timer"
+            android:key="disable_timer"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="Games Enabled"
+            android:key="enable_games"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="Show Streaks"
+            android:key="enable_streaks"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:defaultValue="false" />
+        <Preference android:title="References"
+            android:key="reference_button" />
+        <Preference android:title="Tips"
+            android:key="tips_button" />
+        <Preference android:title="About"
+            android:key="about_button" />
     </PreferenceCategory>
 
 </PreferenceScreen>

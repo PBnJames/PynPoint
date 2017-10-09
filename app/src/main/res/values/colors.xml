@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="twitchPurple">#6441A5</color>
+    <color name="darkerTwitchPurple">#4b307b</color>
+    <color name="lighterTwitchPurple">#815fc0</color>
     <color name="antiFlashWhite">#F2F3F4</color>
     <color name="black">#000000</color>
     <color name="uglyGreen">#2F7D2F</color>

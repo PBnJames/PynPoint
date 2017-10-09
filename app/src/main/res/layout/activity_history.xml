@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.pynpoint.HistoryActivity"
+    android:orientation="vertical"
     android:background="@color/twitchPurple">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/antiFlashWhite"
+            android:text="@string/history_title"/>
 
-</android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:id="@+id/history_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:id="@+id/table_row0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/title_label_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_date_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+            <TextView
+                android:id="@+id/title_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_length_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+            <TextView
+                android:id="@+id/title_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_break_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+            <TextView
+                android:id="@+id/title_label_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_interval_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+            <TextView
+                android:id="@+id/title_label_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_percentage_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+            <TextView
+                android:id="@+id/title_label_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/history_points_label"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/antiFlashWhite"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
