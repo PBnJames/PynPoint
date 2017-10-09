@@ -26,7 +26,7 @@ public class TimerSetActivity extends AppCompatActivity {
         toProfileActivity();
     }
 
-    private void toProfileActivity() {
+    public void toProfileActivity() {
         Button profileScreenButton = (Button)findViewById(R.id.to_profile_button);
         final Intent intent = new Intent(this, ProfileActivity.class);
         profileScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +39,7 @@ public class TimerSetActivity extends AppCompatActivity {
         });
     }
 
-    private void toHistoryActivity() {
+    public void toHistoryActivity() {
         Button historyScreenButton = (Button)findViewById(R.id.to_history_button);
         final Intent intent = new Intent(this, HistoryActivity.class);
         historyScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +52,7 @@ public class TimerSetActivity extends AppCompatActivity {
         });
     }
 
-    private void toSettingsActivity() {
+    public void toSettingsActivity() {
         Button settingsScreenButton = (Button)findViewById(R.id.to_settings_button);
         final Intent intent = new Intent(this, SettingsActivity.class);
         settingsScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +65,7 @@ public class TimerSetActivity extends AppCompatActivity {
         });
     }
 
-    private void toTimerStartActivity() {
+    public void toTimerStartActivity() {
         Button startScreenButton = (Button)findViewById(R.id.start_timer_button);
         final Intent intent = new Intent(this, TimerStartActivity.class);
         startScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +78,7 @@ public class TimerSetActivity extends AppCompatActivity {
         });
     }
 
-    private void setSpinners(int spinnerId, int numOfItems) {
+    public void setSpinners(int spinnerId, int numOfItems) {
         Spinner hourSpinner=(Spinner) findViewById(spinnerId);
         Integer[] items = new Integer[numOfItems];
         for(int i = 0; i < items.length; ++i){

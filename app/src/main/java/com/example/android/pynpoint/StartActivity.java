@@ -15,7 +15,7 @@ public class StartActivity extends AppCompatActivity {
         toDescriptionActivity();
     }
 
-    private void toDescriptionActivity() {
+    public void toDescriptionActivity() {
         Button startScreenButton = (Button)findViewById(R.id.start_screen_button);
         final Intent intent = new Intent(this, DescriptionActivity.class);
 

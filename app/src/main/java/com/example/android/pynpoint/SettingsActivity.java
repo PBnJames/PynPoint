@@ -21,7 +21,7 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
 
-    private void toProfileActivity() {
+    public void toProfileActivity() {
         Button profileScreenButton = (Button)findViewById(R.id.to_profile_button_settings);
         final Intent intent = new Intent(this, ProfileActivity.class);
         profileScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +34,7 @@ public class SettingsActivity extends PreferenceActivity {
         });
     }
 
-    private void toHistoryActivity() {
+    public void toHistoryActivity() {
         Button historyScreenButton = (Button)findViewById(R.id.to_history_button_settings);
         final Intent intent = new Intent(this, HistoryActivity.class);
         historyScreenButton.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +48,7 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
 
-    private void toTimerStartActivity() {
+    public void toTimerStartActivity() {
         Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_settings);
         final Intent intent = new Intent(this, TimerSetActivity.class);
         timerScreenButton.setOnClickListener(new View.OnClickListener() {

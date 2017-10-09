@@ -15,7 +15,7 @@ public class DescriptionActivity extends AppCompatActivity {
         toTimerSetActivity();
     }
 
-    private void toTimerSetActivity() {
+    public void toTimerSetActivity() {
         Button descriptionScreenButton = (Button)findViewById(R.id.description_screen_button);
         final Intent intent = new Intent(this, TimerSetActivity.class);
 
