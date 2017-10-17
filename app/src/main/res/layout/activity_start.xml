@@ -10,16 +10,20 @@
 
 
     <ImageView
-        android:layout_width="350dp"
-        android:layout_height="600dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/test_pinpoint_title"
         android:id="@+id/pynpoint_title" />
 
     <Button
         android:id="@+id/start_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:textSize="22sp"
         android:text="@string/start_button"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
