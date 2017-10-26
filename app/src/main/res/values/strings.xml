@@ -38,9 +38,12 @@
     <string name="default_points_value">99999999</string>
     <string name="profile_title">Profile</string>
     <string name="shop_button_text">Shop</string>
-    <string name="reference_button">Reference</string>
-    <string name="tips_button">Tips</string>
-    <string name="about_button">About</string>
+    <string name="reference_button">ReferenceKey</string>
+    <string name="tips_button">TipsKey</string>
+    <string name="about_button">AboutKey</string>
+    <string name="about_title">About</string>
+    <string name="reference_title">Reference</string>
+    <string name="timer_set_title">Timer Set</string>
 
 
     <string-array name="study_pattern_list">
