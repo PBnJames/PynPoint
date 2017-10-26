@@ -2,6 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory>
+        <Preference/>
         <CheckBoxPreference
             android:title="Quit button enabled"
             android:key="enable_quit_button"
@@ -20,6 +21,7 @@
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
+<!--
         <CheckBoxPreference
             android:title="Games Enabled"
             android:key="enable_games"
@@ -32,6 +34,7 @@
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
+-->
         <Preference android:title="References"
             android:key="reference_button" />
         <Preference android:title="Tips"

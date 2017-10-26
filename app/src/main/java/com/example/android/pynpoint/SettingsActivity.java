@@ -17,7 +17,7 @@ public class SettingsActivity extends PreferenceActivity {
         setContentView(R.layout.activity_settings_button_layout);
         toProfileActivity();
         toHistoryActivity();
-        toTimerStartActivity();
+        toTimerSetActivity();
     }
 
 
@@ -48,7 +48,7 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
 
-    public void toTimerStartActivity() {
+    public void toTimerSetActivity() {
         Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_settings);
         final Intent intent = new Intent(this, TimerSetActivity.class);
         timerScreenButton.setOnClickListener(new View.OnClickListener() {

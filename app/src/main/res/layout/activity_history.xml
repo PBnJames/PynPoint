@@ -14,89 +14,322 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:textColor="@color/antiFlashWhite"
-            android:text="@string/history_title"/>
-
+            android:text="@string/history_title"
+            android:layout_marginBottom="60dp"/>
     </RelativeLayout>
-
 
     <TableLayout
         android:id="@+id/history_table"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
         <TableRow
             android:id="@+id/table_row0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal">
-
             <TextView
-                android:id="@+id/title_label_0"
+                android:id="@+id/row0_date_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"
                 android:text="@string/history_date_label"
-                android:textSize="@dimen/small_text_size"
+                android:textSize="@dimen/small_medium_text_size"
                 android:textColor="@color/antiFlashWhite"
-                />
-
+                android:gravity="center"/>
             <TextView
-                android:id="@+id/title_label_1"
+                android:id="@+id/row0_length_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"
                 android:text="@string/history_length_label"
-                android:textSize="@dimen/small_text_size"
+                android:textSize="@dimen/small_medium_text_size"
                 android:textColor="@color/antiFlashWhite"
-                />
-
+                android:gravity="center"/>
             <TextView
-                android:id="@+id/title_label_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/cell_shape"
-                android:padding="5dp"
-                android:text="@string/history_break_label"
-                android:textSize="@dimen/small_text_size"
-                android:textColor="@color/antiFlashWhite"
-                />
-
-            <TextView
-                android:id="@+id/title_label_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/cell_shape"
-                android:padding="5dp"
-                android:text="@string/history_interval_label"
-                android:textSize="@dimen/small_text_size"
-                android:textColor="@color/antiFlashWhite"
-                />
-
-            <TextView
-                android:id="@+id/title_label_4"
+                android:id="@+id/row0_percent_complete_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"
                 android:text="@string/history_percentage_label"
-                android:textSize="@dimen/small_text_size"
+                android:textSize="@dimen/small_medium_text_size"
                 android:textColor="@color/antiFlashWhite"
-                />
-
+                android:gravity="center"/>
             <TextView
-                android:id="@+id/title_label_5"
+                android:id="@+id/row0_points_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"
                 android:text="@string/history_points_label"
-                android:textSize="@dimen/small_text_size"
+                android:textSize="@dimen/small_medium_text_size"
                 android:textColor="@color/antiFlashWhite"
-                />
-
+                android:gravity="center"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/table_row1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/row_1_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_date"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_1_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_length"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_1_percent_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_percent_complete"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_1_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_points"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table_row2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/row_2_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_date"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_2_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_length"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_2_percent_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_percent_complete"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_2_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_points"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table_row3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/row_3_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_date"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_3_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_length"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_3_percent_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_percent_complete"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_3_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_points"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table_row4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/row_4_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_date"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_4_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_length"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_4_percent_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_percent_complete"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_4_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_points"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/table_row5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/row_5_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_date"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_5_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_length"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_5_percent_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_percent_complete"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
+            <TextView
+                android:id="@+id/row_5_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/default_points"
+                android:textSize="@dimen/small_medium_text_size"
+                android:textColor="@color/antiFlashWhite" />
         </TableRow>
     </TableLayout>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/to_timer_button_history"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:text="@string/to_timer_button_label"
+            android:textSize="@dimen/tiny_text_size"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/to_settings_button_history"
+            android:text="@string/to_settings_button_label"
+            android:textSize="@dimen/tiny_text_size"
+            android:textColor="@color/black"
+            android:layout_alignTop="@+id/to_timer_button_history"
+            android:layout_toEndOf="@+id/to_timer_button_history"
+            android:layout_toRightOf="@+id/to_timer_button_history"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+        <Button
+            android:id="@+id/to_history_button_history"
+            android:text="@string/to_history_button_label"
+            android:textSize="@dimen/tiny_text_size"
+            android:textColor="@color/black"
+            android:layout_alignTop="@+id/to_timer_button_history"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/to_profile_button_history"
+            android:layout_toStartOf="@id/to_profile_button_history"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+        <Button
+            android:id="@+id/to_profile_button_history"
+            android:text="@string/to_profile_button_label"
+            android:textSize="@dimen/tiny_text_size"
+            android:textColor="@color/black"
+            android:layout_alignTop="@+id/to_timer_button_history"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+    </RelativeLayout>
 </LinearLayout>

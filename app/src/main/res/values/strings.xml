@@ -23,13 +23,15 @@
     <string name="interval_hour_prompt">Select interval length (hours)</string>
     <string name="interval_minute_prompt">Select interval length (minutes)</string>
     <string name="settings_actionbar_label">Settings</string>
-    <string name="history_date_label">Date</string>
-    <string name="history_length_label">Length</string>
-    <string name="history_break_label">Break</string>
-    <string name="history_interval_label">Interval</string>
-    <string name="history_percentage_label">% Complete</string>
-    <string name="history_points_label">Points</string>
+    <string name="history_date_label"><b>Date</b></string>
+    <string name="history_length_label"><b>Length</b></string>
+    <string name="history_percentage_label"><b>% Complete</b></string>
+    <string name="history_points_label"><b>Points</b></string>
     <string name="history_title">History</string>
+    <string name="default_date">99/99/9999</string>
+    <string name="default_length">99 h 59 m</string>
+    <string name="default_percent_complete">100%</string>
+    <string name="default_points">999999</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>
