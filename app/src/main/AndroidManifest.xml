@@ -21,7 +21,8 @@
         <activity android:name=".TimerStartActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ShopActivity"></activity>
     </application>
 
 </manifest>

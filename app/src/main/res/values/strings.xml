@@ -33,6 +33,11 @@
     <string name="default_percent_complete">100%</string>
     <string name="default_points">999999</string>
     <string name="profile_pic_descriptor">Profile Picture</string>
+    <string name="default_profile_name">Username</string>
+    <string name="points_title_profile">Points: </string>
+    <string name="default_points_value">99999999</string>
+    <string name="profile_title">Profile</string>
+    <string name="shop_button_text">Shop</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

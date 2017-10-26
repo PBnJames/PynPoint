@@ -7,6 +7,16 @@
     tools:context="com.example.android.pynpoint.ProfileActivity"
     android:background="@color/twitchPurple">
 
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/profile_title"
+        android:textSize="40sp"
+        android:textColor="@color/antiFlashWhite"/>
+
     <ImageButton
         android:id="@+id/profile_image"
         android:layout_width="wrap_content"
@@ -14,12 +24,63 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/doghead"
         android:contentDescription="@string/profile_pic_descriptor"
         android:cropToPadding="false" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/default_profile_name"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/antiFlashWhite"
+        />
+
+    <TextView
+        android:id="@+id/points_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/profile_image"
+        android:text="@string/points_title_profile"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/antiFlashWhite"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/user_points"
+        android:layout_toStartOf="@id/user_points"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@id/user_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/points_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/default_points_value"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/antiFlashWhite"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <Button
+        android:id="@+id/shop_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_button_text"
+        android:textColor="@color/black"
+        android:layout_below="@id/user_points"
+        android:layout_alignLeft="@id/points_title"
+        android:layout_alignStart="@id/points_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"/>
+
 
     <Button
         android:id="@+id/to_timer_button_profile"

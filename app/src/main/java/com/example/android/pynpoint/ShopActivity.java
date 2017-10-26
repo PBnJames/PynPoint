@@ -6,22 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ShopActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        toShopActivity();
-        toHistoryActivity();
+        setContentView(R.layout.activity_shop);
         toTimerSetActivity();
         toSettingsActivity();
+        toHistoryActivity();
+        toProfileActivity();
     }
 
-    public void toShopActivity() {
-        Button shopScreenButton = (Button)findViewById(R.id.shop_button);
-        final Intent intent = new Intent(this, ShopActivity.class);
-        shopScreenButton.setOnClickListener(new View.OnClickListener() {
+    public void toProfileActivity() {
+        Button profileScreenButton = (Button)findViewById(R.id.to_profile_button_shop);
+        final Intent intent = new Intent(this, ProfileActivity.class);
+        profileScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -31,9 +31,8 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-
     public void toHistoryActivity() {
-        Button historyScreenButton = (Button)findViewById(R.id.to_history_button_profile);
+        Button historyScreenButton = (Button)findViewById(R.id.to_history_button_shop);
         final Intent intent = new Intent(this, HistoryActivity.class);
         historyScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     public void toTimerSetActivity() {
-        Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_profile);
+        Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_shop);
         final Intent intent = new Intent(this, TimerSetActivity.class);
         timerScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void toSettingsActivity() {
-        Button settingsScreenButton = (Button)findViewById(R.id.to_settings_button_profile);
+        Button settingsScreenButton = (Button)findViewById(R.id.to_settings_button_shop);
         final Intent intent = new Intent(this, SettingsActivity.class);
         settingsScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
