@@ -36,11 +36,11 @@
             android:defaultValue="false" />
 -->
         <Preference android:title="References"
-            android:key="reference_button" />
+            android:key="@string/reference_button" />
         <Preference android:title="Tips"
-            android:key="tips_button" />
+            android:key="@string/tips_button" />
         <Preference android:title="About"
-            android:key="about_button" />
+            android:key="@string/about_button" />
     </PreferenceCategory>
 
 </PreferenceScreen>

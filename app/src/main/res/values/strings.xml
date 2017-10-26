@@ -38,6 +38,10 @@
     <string name="default_points_value">99999999</string>
     <string name="profile_title">Profile</string>
     <string name="shop_button_text">Shop</string>
+    <string name="reference_button">Reference</string>
+    <string name="tips_button">Tips</string>
+    <string name="about_button">About</string>
+
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

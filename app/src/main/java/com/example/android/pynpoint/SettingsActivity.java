@@ -1,6 +1,7 @@
 package com.example.android.pynpoint;
 
 import android.content.Intent;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,9 +16,40 @@ public class SettingsActivity extends PreferenceActivity {
         setTheme(R.style.PreferenceScreen);
         addPreferencesFromResource(R.xml.pref_app);
         setContentView(R.layout.activity_settings_button_layout);
+        toAboutActivity();
+        toReferenceActivity();
         toProfileActivity();
         toHistoryActivity();
         toTimerSetActivity();
+    }
+
+    public void toReferenceActivity() {
+        Preference aboutScreenButton = findPreference(getString(R.string.reference_button));
+        final Intent intent = new Intent(this, ReferenceActivity.class);
+        aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+        });
+    }
+
+
+    public void toAboutActivity() {
+        Preference aboutScreenButton = findPreference(getString(R.string.about_button));
+        final Intent intent = new Intent(this, AboutActivity.class);
+        aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+        });
     }
 
 
