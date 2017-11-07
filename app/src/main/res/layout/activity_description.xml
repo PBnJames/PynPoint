@@ -16,7 +16,7 @@
         android:text="@string/description"
         android:textAlignment="center"
         android:textColor="@color/antiFlashWhite"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
