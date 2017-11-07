@@ -55,6 +55,13 @@
     <string name="reference_4_text">[4] Oracle. (2014, March 18). Java Platform SE 8. Retrieved March 20, 2017, from
 http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="reference_5_text">[5] WashingtonPost. (2013, August 27). Study Techniques that work-and surprisingly don\'t. Retrieved March 20, 2017, from https://www.washingtonpost.com/news/answer-sheet/wp/2013/08/27/study-techniques-that-work-and-surprisingly-dont/?utm_term=.dc749a781f4b</string>
+    <string name="stats_title_textview">Stats</string>
+    <string name="overall_percentage_complete_textview">Overall % Complete:</string>
+    <string name="overall_percentage_complete_textview_value">100%</string>
+    <string name="overall_time_studied_textview">Overall Time Studied:</string>
+    <string name="overall_time_studied_textview_value">999999 h 59 m</string>
+    <string name="num_of_study_sessions_textview"># of Study Sessions:</string>
+    <string name="num_of_study_sessions_textview_value">999999999999</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>
