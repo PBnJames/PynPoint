@@ -45,6 +45,9 @@
     <string name="reference_title">Reference</string>
     <string name="timer_set_title">Timer Set</string>
     <string name="shop_title">Shop</string>
+    <string name="about">Ryan and James created this app for their Senior Design project in Fall 2017. Their goal
+    was to try and create an app that incentivizes users to block out social media and communication so they can increase
+    their focus in pynpoint their future.</string>
 
 
     <string-array name="study_pattern_list">
