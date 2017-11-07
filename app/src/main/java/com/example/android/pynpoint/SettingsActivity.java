@@ -21,11 +21,26 @@ public class SettingsActivity extends PreferenceActivity {
         toProfileActivity();
         toHistoryActivity();
         toTimerSetActivity();
+        toTipsActivity();
     }
 
     public void toReferenceActivity() {
         Preference aboutScreenButton = findPreference(getString(R.string.reference_button));
         final Intent intent = new Intent(this, ReferenceActivity.class);
+        aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+        });
+    }
+
+    public void toTipsActivity() {
+        Preference aboutScreenButton = findPreference(getString(R.string.tips_button));
+        final Intent intent = new Intent(this, TipsActivity.class);
         aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
