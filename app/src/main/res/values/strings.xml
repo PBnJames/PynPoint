@@ -42,13 +42,19 @@
     <string name="tips_button">TipsKey</string>
     <string name="about_button">AboutKey</string>
     <string name="about_title">About</string>
-    <string name="reference_title">Reference</string>
+    <string name="reference_title">References</string>
     <string name="timer_set_title">Timer Set</string>
     <string name="shop_title">Shop</string>
     <string name="about">Ryan and James created this app for their Senior Design project in Fall 2017. Their goal
     was to try and create an app that incentivizes users to block out social media and communication so they can increase
     their focus and pynpoint their future.</string>
-
+    <string name="reference_1_text">[1] Cengage. (2016, April 28). Tips for Students: How to Study with 5,3 or 1 Day until the Exam.
+        Retrieved March 20, 2017, from https://blog.cengage.com/tips-for-students-how-to-study-with-5-3-or-1-day-until-the-exam/</string>
+    <string name="reference_2_text">[2] Google. (2014, December). Meet Android Studio. Retrieved March 20, 2017, from https://developer.android.com/studio/intro/index.html</string>
+    <string name="reference_3_text">[3] OnlineSchools. (2017, February 20). The Science of Taking a Break. Retrieved March 20, 2017, from http://www.onlineschools.org/science-of-study-breaks/</string>
+    <string name="reference_4_text">[4] Oracle. (2014, March 18). Java Platform SE 8. Retrieved March 20, 2017, from
+http://docs.oracle.com/javase/8/docs/api/index.html</string>
+    <string name="reference_5_text">[5] WashingtonPost. (2013, August 27). Study Techniques that work-and surprisingly don\'t. Retrieved March 20, 2017, from https://www.washingtonpost.com/news/answer-sheet/wp/2013/08/27/study-techniques-that-work-and-surprisingly-dont/?utm_term=.dc749a781f4b</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

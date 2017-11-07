@@ -15,6 +15,77 @@
         android:textColor="@color/antiFlashWhite"
         android:textSize="40sp"/>
 
+
+    <TextView
+        android:id="@+id/reference_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/reference_1_text"
+        android:layout_gravity="start"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="@dimen/small_medium_text_size"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/reference_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/reference_2_text"
+        android:layout_gravity="start"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="@dimen/small_medium_text_size"
+        android:layout_below="@id/reference_1"/>
+
+    <TextView
+        android:id="@+id/reference_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/reference_3_text"
+        android:layout_gravity="start"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="@dimen/small_medium_text_size"
+        android:layout_below="@id/reference_2"/>
+
+    <TextView
+        android:id="@+id/reference_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/reference_4_text"
+        android:layout_gravity="start"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="@dimen/small_medium_text_size"
+        android:layout_below="@id/reference_3"/>
+
+    <TextView
+        android:id="@+id/reference_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/reference_5_text"
+        android:layout_gravity="start"
+        android:textColor="@color/antiFlashWhite"
+        android:textSize="@dimen/small_medium_text_size"
+        android:layout_below="@id/reference_4"/>
+
     <Button
         android:id="@+id/to_timer_button_reference"
         android:layout_width="76dp"
