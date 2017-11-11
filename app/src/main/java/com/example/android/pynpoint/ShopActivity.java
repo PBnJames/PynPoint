@@ -1,17 +1,31 @@
 package com.example.android.pynpoint;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class ShopActivity extends AppCompatActivity {
+
+    public static Intent buildIntent(Context context){
+        Intent intent = new Intent(context, ShopActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
+
+      //  RelativeLayout shopLayout = (RelativeLayout) findViewById(R.id.shopActivity);
+        //shopLayout.setBackgroundColor(getResources().getColor(R.color.antiFlashWhite));
+
+
         toTimerSetActivity();
         toSettingsActivity();
         toHistoryActivity();
@@ -20,12 +34,11 @@ public class ShopActivity extends AppCompatActivity {
 
     public void toProfileActivity() {
         Button profileScreenButton = (Button)findViewById(R.id.to_profile_button_shop);
-        final Intent intent = new Intent(this, ProfileActivity.class);
+        final Intent profileIntent = ProfileActivity.buildIntent(this);
         profileScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(profileIntent);
                 finish();
             }
         });
@@ -33,12 +46,11 @@ public class ShopActivity extends AppCompatActivity {
 
     public void toHistoryActivity() {
         Button historyScreenButton = (Button)findViewById(R.id.to_history_button_shop);
-        final Intent intent = new Intent(this, HistoryActivity.class);
+        final Intent historyIntent = HistoryActivity.buildIntent(this);
         historyScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(historyIntent);
                 finish();
             }
         });
@@ -47,12 +59,11 @@ public class ShopActivity extends AppCompatActivity {
 
     public void toTimerSetActivity() {
         Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_shop);
-        final Intent intent = new Intent(this, TimerSetActivity.class);
+        final Intent timerSetIntent = TimerSetActivity.buildIntent(this);
         timerScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(timerSetIntent);
                 finish();
             }
         });
@@ -60,12 +71,11 @@ public class ShopActivity extends AppCompatActivity {
 
     public void toSettingsActivity() {
         Button settingsScreenButton = (Button)findViewById(R.id.to_settings_button_shop);
-        final Intent intent = new Intent(this, SettingsActivity.class);
+        final Intent settingsIntent = SettingsActivity.buildIntent(this);
         settingsScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(settingsIntent);
                 finish();
             }
         });

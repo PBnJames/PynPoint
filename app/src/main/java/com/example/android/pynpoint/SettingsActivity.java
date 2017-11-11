@@ -1,5 +1,6 @@
 package com.example.android.pynpoint;
 
+import android.content.Context;
 import android.content.Intent;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -9,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class SettingsActivity extends PreferenceActivity {
+
+    public static Intent buildIntent(Context context){
+        Intent intent = new Intent(context, SettingsActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +33,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toReferenceActivity() {
         Preference aboutScreenButton = findPreference(getString(R.string.reference_button));
-        final Intent intent = new Intent(this, ReferenceActivity.class);
+        final Intent referenceIntent = ReferenceActivity.buildIntent(this);
         aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(referenceIntent);
                 finish();
                 return true;
             }
@@ -40,12 +46,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toTipsActivity() {
         Preference aboutScreenButton = findPreference(getString(R.string.tips_button));
-        final Intent intent = new Intent(this, TipsActivity.class);
+        final Intent tipsIntent = TipsActivity.buildIntent(this);
         aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(tipsIntent);
                 finish();
                 return true;
             }
@@ -55,12 +60,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toAboutActivity() {
         Preference aboutScreenButton = findPreference(getString(R.string.about_button));
-        final Intent intent = new Intent(this, AboutActivity.class);
+        final Intent aboutIntent = AboutActivity.buildIntent(this);
         aboutScreenButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(aboutIntent);
                 finish();
                 return true;
             }
@@ -70,12 +74,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toProfileActivity() {
         Button profileScreenButton = (Button)findViewById(R.id.to_profile_button_settings);
-        final Intent intent = new Intent(this, ProfileActivity.class);
+        final Intent profileIntent = ProfileActivity.buildIntent(this);
         profileScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(profileIntent);
                 finish();
             }
         });
@@ -83,12 +86,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toHistoryActivity() {
         Button historyScreenButton = (Button)findViewById(R.id.to_history_button_settings);
-        final Intent intent = new Intent(this, HistoryActivity.class);
+        final Intent historyIntent = HistoryActivity.buildIntent(this);
         historyScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(historyIntent);
                 finish();
             }
         });
@@ -97,12 +99,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void toTimerSetActivity() {
         Button timerScreenButton = (Button)findViewById(R.id.to_timer_button_settings);
-        final Intent intent = new Intent(this, TimerSetActivity.class);
+        final Intent setTimerIntent = TimerSetActivity.buildIntent(this);
         timerScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                startActivity(setTimerIntent);
                 finish();
             }
         });
