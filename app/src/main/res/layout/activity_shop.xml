@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.pynpoint.ShopActivity"
-    android:background="@color/twitchPurple"
     android:id="@+id/shopActivity">
 
     <TextView
@@ -13,9 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/shop_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="40sp"/>
-
 
     <Button
         android:id="@+id/to_timer_button_shop"
@@ -23,45 +21,37 @@
         android:layout_height="wrap_content"
         android:text="@string/to_timer_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"/>
+
     <Button
         android:id="@+id/to_settings_button_shop"
         android:text="@string/to_settings_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_shop"
         android:layout_toEndOf="@+id/to_timer_button_shop"
-        android:layout_toRightOf="@+id/to_timer_button_shop"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
+
     <Button
         android:id="@+id/to_history_button_shop"
         android:text="@string/to_history_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_shop"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/to_profile_button_shop"
         android:layout_toStartOf="@id/to_profile_button_shop"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
+
     <Button
         android:id="@+id/to_profile_button_shop"
         android:text="@string/to_profile_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_shop"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
 </RelativeLayout>

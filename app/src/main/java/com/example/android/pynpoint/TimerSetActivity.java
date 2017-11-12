@@ -88,6 +88,7 @@ public class TimerSetActivity extends AppCompatActivity {
             items[i] = i;
         }
         ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item, items);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         hourSpinner.setAdapter(adapter);
     }
 

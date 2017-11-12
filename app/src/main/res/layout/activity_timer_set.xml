@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.pynpoint.TimerSetActivity"
-    android:background="@color/twitchPurple">
+    tools:context="com.example.android.pynpoint.TimerSetActivity">
 
 
     <TextView
@@ -13,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/timer_set_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="40sp"/>
 
     <TextView
@@ -21,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/study_pattern_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/large_text_size"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"/>
@@ -33,19 +32,17 @@
         android:spinnerMode="dialog"
         style="@style/spinnerStyle"
         android:layout_below="@+id/study_pattern_title"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/timer_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/timer_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/large_text_size"
         android:layout_below="@id/study_pattern_spinner"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginStart="50dp"/>
 
     <TextView
@@ -53,11 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hour_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/timer_title"
         android:layout_marginTop="14dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
@@ -65,11 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/minutes_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/timer_hour_label"
         android:layout_alignStart="@id/timer_hour_label"
-        android:layout_alignLeft="@id/timer_hour_label"
         android:layout_marginTop="17dp"/>
 
     <Spinner
@@ -79,9 +74,7 @@
         android:prompt="@string/timer_hour_prompt"
         android:layout_below="@id/timer_title"
         android:layout_toEndOf="@id/timer_hour_label"
-        android:layout_toRightOf="@id/timer_hour_label"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"/>
 
     <Spinner
@@ -90,23 +83,19 @@
         android:spinnerMode="dialog"
         android:prompt="@string/timer_minute_prompt"
         android:layout_below="@id/timer_hour_spinner"
-        android:layout_alignLeft="@id/timer_hour_spinner"
         android:layout_alignStart="@id/timer_hour_spinner"
-        android:layout_marginTop="12dp"
-        />
+        android:layout_marginTop="12dp"/>
 
     <TextView
         android:id="@+id/break_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/break_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/large_text_size"
         android:layout_below="@id/study_pattern_spinner"
         android:layout_marginTop="15dp"
-        android:layout_alignLeft="@+id/break_hour_label"
         android:layout_alignStart="@id/break_hour_label"
-        android:layout_marginLeft="45dp"
         android:layout_marginStart="45dp"/>
 
 
@@ -115,13 +104,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hour_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/break_title"
-        android:layout_toLeftOf="@+id/break_hour_spinner"
         android:layout_toStartOf="@+id/break_hour_spinner"
         android:layout_marginTop="14dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
@@ -129,14 +116,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/minutes_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@+id/break_hour_label"
-        android:layout_toLeftOf="@+id/break_minute_spinner"
         android:layout_toStartOf="@+id/break_minute_spinner"
         android:layout_marginTop="17dp"
-        android:layout_alignStart="@+id/break_hour_label"
-        android:layout_alignLeft="@+id/break_hour_label"/>
+        android:layout_alignStart="@+id/break_hour_label"/>
 
 
     <Spinner
@@ -146,11 +131,8 @@
         android:prompt="@string/break_hour_prompt"
         android:layout_below="@id/break_title"
         android:layout_marginTop="10dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"/>
 
     <Spinner
@@ -159,12 +141,9 @@
         android:spinnerMode="dialog"
         android:prompt="@string/break_minute_prompt"
         android:layout_below="@id/break_hour_spinner"
-        android:layout_alignLeft="@id/break_hour_spinner"
         android:layout_alignStart="@id/break_hour_spinner"
         android:layout_marginTop="12dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
 
 
@@ -173,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/interval_title"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/large_text_size"
         android:layout_below="@id/timer_minute_spinner"
         android:layout_centerHorizontal="true"
@@ -184,11 +163,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hour_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/interval_title"
         android:layout_marginTop="14dp"
-        android:layout_marginLeft="115dp"
         android:layout_marginStart="115dp"/>
 
     <TextView
@@ -196,11 +174,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/minutes_label"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/interval_hour_label"
         android:layout_marginTop="17dp"
-        android:layout_alignLeft="@id/interval_hour_label"
         android:layout_alignStart="@id/interval_hour_label"/>
 
     <Spinner
@@ -210,9 +187,7 @@
         android:prompt="@string/interval_hour_prompt"
         android:layout_below="@id/interval_title"
         android:layout_toEndOf="@id/interval_hour_label"
-        android:layout_toRightOf="@id/interval_hour_label"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"/>
 
     <Spinner
@@ -221,7 +196,6 @@
         android:spinnerMode="dialog"
         android:prompt="@string/interval_minute_prompt"
         android:layout_below="@id/interval_hour_spinner"
-        android:layout_alignLeft="@id/interval_hour_spinner"
         android:layout_alignStart="@id/interval_hour_spinner"
         android:layout_marginTop="12dp"/>
 
@@ -241,7 +215,6 @@
         android:layout_height="wrap_content"
         android:text="@string/to_timer_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"/>
@@ -253,10 +226,8 @@
         android:text="@string/to_settings_button_label"
         android:textSize="@dimen/tiny_text_size"
         android:layout_alignTop="@id/to_timer_button"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:layout_toEndOf="@id/to_timer_button"
-        android:layout_toRightOf="@id/to_timer_button" />
+        android:layout_toEndOf="@id/to_timer_button"/>
 
     <Button
         android:id="@+id/to_history_button"
@@ -265,9 +236,7 @@
         android:text="@string/to_history_button_label"
         android:textSize="@dimen/tiny_text_size"
         android:layout_alignTop="@id/to_timer_button"
-        android:layout_toLeftOf="@id/to_profile_button"
         android:layout_toStartOf="@id/to_profile_button"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
 
     <Button
@@ -277,10 +246,6 @@
         android:text="@string/to_profile_button_label"
         android:textSize="@dimen/tiny_text_size"
         android:layout_alignTop="@id/to_timer_button"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp" />
-
-
 </RelativeLayout>

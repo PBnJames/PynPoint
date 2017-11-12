@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/twitchPurple">
+    android:orientation="vertical">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40sp"
-            android:textColor="@color/antiFlashWhite"
+            android:textColor="?attr/secondaryTextColor"
             android:text="@string/history_title"
             android:layout_marginBottom="60dp"/>
     </RelativeLayout>
@@ -36,7 +35,7 @@
                 android:padding="5dp"
                 android:text="@string/history_date_label"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite"
+                android:textColor="?attr/secondaryTextColor"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/row0_length_title"
@@ -46,7 +45,7 @@
                 android:padding="5dp"
                 android:text="@string/history_length_label"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite"
+                android:textColor="?attr/secondaryTextColor"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/row0_percent_complete_title"
@@ -56,7 +55,7 @@
                 android:padding="5dp"
                 android:text="@string/history_percentage_label"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite"
+                android:textColor="?attr/secondaryTextColor"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/row0_points_title"
@@ -66,7 +65,7 @@
                 android:padding="5dp"
                 android:text="@string/history_points_label"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite"
+                android:textColor="?attr/secondaryTextColor"
                 android:gravity="center"/>
         </TableRow>
         <TableRow
@@ -82,7 +81,7 @@
                 android:padding="5dp"
                 android:text="@string/default_date"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_1_length"
                 android:layout_width="wrap_content"
@@ -91,7 +90,7 @@
                 android:padding="5dp"
                 android:text="@string/default_length"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_1_percent_complete"
                 android:layout_width="wrap_content"
@@ -100,7 +99,7 @@
                 android:padding="5dp"
                 android:text="@string/default_percent_complete"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_1_points"
                 android:layout_width="wrap_content"
@@ -109,7 +108,7 @@
                 android:padding="5dp"
                 android:text="@string/default_points"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
         </TableRow>
         <TableRow
             android:id="@+id/table_row2"
@@ -124,7 +123,7 @@
                 android:padding="5dp"
                 android:text="@string/default_date"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_2_length"
                 android:layout_width="wrap_content"
@@ -133,7 +132,7 @@
                 android:padding="5dp"
                 android:text="@string/default_length"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_2_percent_complete"
                 android:layout_width="wrap_content"
@@ -142,7 +141,7 @@
                 android:padding="5dp"
                 android:text="@string/default_percent_complete"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_2_points"
                 android:layout_width="wrap_content"
@@ -151,7 +150,7 @@
                 android:padding="5dp"
                 android:text="@string/default_points"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
         </TableRow>
         <TableRow
             android:id="@+id/table_row3"
@@ -166,7 +165,7 @@
                 android:padding="5dp"
                 android:text="@string/default_date"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_3_length"
                 android:layout_width="wrap_content"
@@ -175,7 +174,7 @@
                 android:padding="5dp"
                 android:text="@string/default_length"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_3_percent_complete"
                 android:layout_width="wrap_content"
@@ -184,7 +183,7 @@
                 android:padding="5dp"
                 android:text="@string/default_percent_complete"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_3_points"
                 android:layout_width="wrap_content"
@@ -193,7 +192,7 @@
                 android:padding="5dp"
                 android:text="@string/default_points"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
         </TableRow>
         <TableRow
             android:id="@+id/table_row4"
@@ -208,7 +207,7 @@
                 android:padding="5dp"
                 android:text="@string/default_date"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_4_length"
                 android:layout_width="wrap_content"
@@ -217,7 +216,7 @@
                 android:padding="5dp"
                 android:text="@string/default_length"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_4_percent_complete"
                 android:layout_width="wrap_content"
@@ -226,7 +225,7 @@
                 android:padding="5dp"
                 android:text="@string/default_percent_complete"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_4_points"
                 android:layout_width="wrap_content"
@@ -235,7 +234,7 @@
                 android:padding="5dp"
                 android:text="@string/default_points"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
         </TableRow>
         <TableRow
             android:id="@+id/table_row5"
@@ -250,7 +249,7 @@
                 android:padding="5dp"
                 android:text="@string/default_date"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_5_length"
                 android:layout_width="wrap_content"
@@ -259,7 +258,7 @@
                 android:padding="5dp"
                 android:text="@string/default_length"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_5_percent_complete"
                 android:layout_width="wrap_content"
@@ -268,7 +267,7 @@
                 android:padding="5dp"
                 android:text="@string/default_percent_complete"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
             <TextView
                 android:id="@+id/row_5_points"
                 android:layout_width="wrap_content"
@@ -277,7 +276,7 @@
                 android:padding="5dp"
                 android:text="@string/default_points"
                 android:textSize="@dimen/small_medium_text_size"
-                android:textColor="@color/antiFlashWhite" />
+                android:textColor="?attr/secondaryTextColor"/>
         </TableRow>
     </TableLayout>
 
@@ -290,46 +289,35 @@
             android:layout_height="wrap_content"
             android:text="@string/to_timer_button_label"
             android:textSize="@dimen/tiny_text_size"
-            android:textColor="@color/black"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="20dp"/>
         <Button
             android:id="@+id/to_settings_button_history"
             android:text="@string/to_settings_button_label"
             android:textSize="@dimen/tiny_text_size"
-            android:textColor="@color/black"
             android:layout_alignTop="@+id/to_timer_button_history"
             android:layout_toEndOf="@+id/to_timer_button_history"
-            android:layout_toRightOf="@+id/to_timer_button_history"
             android:layout_width="76dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"/>
         <Button
             android:id="@+id/to_history_button_history"
             android:text="@string/to_history_button_label"
             android:textSize="@dimen/tiny_text_size"
-            android:textColor="@color/black"
             android:layout_alignTop="@+id/to_timer_button_history"
             android:layout_width="76dp"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/to_profile_button_history"
             android:layout_toStartOf="@id/to_profile_button_history"
-            android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"/>
         <Button
             android:id="@+id/to_profile_button_history"
             android:text="@string/to_profile_button_label"
             android:textSize="@dimen/tiny_text_size"
-            android:textColor="@color/black"
             android:layout_alignTop="@+id/to_timer_button_history"
             android:layout_width="76dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"/>
     </RelativeLayout>
 </LinearLayout>

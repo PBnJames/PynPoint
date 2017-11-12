@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.pynpoint.ProfileActivity"
-    android:background="@color/twitchPurple">
+    tools:context="com.example.android.pynpoint.ProfileActivity">
 
     <TextView
         android:id="@+id/profile_title"
@@ -15,33 +14,29 @@
         android:layout_centerHorizontal="true"
         android:text="@string/profile_title"
         android:textSize="40sp"
-        android:textColor="@color/antiFlashWhite"/>
+        android:textColor="?attr/secondaryTextColor"/>
 
     <ImageButton
         android:id="@+id/profile_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="100dp"
         android:background="@drawable/doghead"
         android:contentDescription="@string/profile_pic_descriptor"
-        android:cropToPadding="false" />
+        android:cropToPadding="false"/>
 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_image"
-        android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
         android:text="@string/default_profile_name"
         android:textSize="@dimen/large_text_size"
-        android:textColor="@color/antiFlashWhite"
-        />
+        android:textColor="?attr/secondaryTextColor"/>
 
     <TextView
         android:id="@+id/points_title"
@@ -50,11 +45,9 @@
         android:layout_alignTop="@id/profile_image"
         android:text="@string/points_title_profile"
         android:textSize="@dimen/large_text_size"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_toLeftOf="@+id/user_points"
-        android:layout_toStartOf="@id/user_points"
+        android:layout_toStartOf="@+id/user_points"
         android:layout_marginTop="30dp"/>
     <TextView
         android:id="@id/user_points"
@@ -62,18 +55,16 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/points_title"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:text="@string/default_points_value"
         android:textSize="@dimen/large_text_size"
-        android:textColor="@color/antiFlashWhite"
-        android:layout_marginRight="15dp"
+        android:textColor="?attr/secondaryTextColor"
         android:layout_marginEnd="15dp"/>
 
     <TextView
         android:id="@+id/stats_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/stats_title_textview"
         android:textSize="@dimen/very_large_text_size"
         android:layout_below="@id/username"
@@ -83,72 +74,63 @@
         android:id="@+id/overall_percentage_complete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/overall_percentage_complete_textview"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/stats_title"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/overall_percentage_complete_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/overall_percentage_complete_textview_value"
         android:textSize="@dimen/medium_text_size"
-        android:layout_toRightOf="@id/overall_percentage_complete"
         android:layout_toEndOf="@id/overall_percentage_complete"
         android:layout_alignTop="@id/overall_percentage_complete"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/overall_time_studied"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/overall_time_studied_textview"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/overall_percentage_complete"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/overall_time_studied_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/overall_time_studied_textview_value"
         android:textSize="@dimen/medium_text_size"
-        android:layout_toRightOf="@id/overall_time_studied"
         android:layout_toEndOf="@id/overall_time_studied"
         android:layout_alignTop="@id/overall_time_studied"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/num_of_study_sessions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/num_of_study_sessions_textview"
         android:textSize="@dimen/medium_text_size"
         android:layout_below="@id/overall_time_studied"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/num_of_study_sessions_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/antiFlashWhite"
+        android:textColor="?attr/secondaryTextColor"
         android:text="@string/num_of_study_sessions_textview_value"
         android:textSize="@dimen/medium_text_size"
-        android:layout_toRightOf="@id/num_of_study_sessions"
         android:layout_toEndOf="@id/num_of_study_sessions"
         android:layout_alignTop="@id/num_of_study_sessions"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
     <Button
@@ -156,13 +138,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/shop_button_text"
-        android:textColor="@color/black"
         android:layout_below="@id/user_points"
-        android:layout_alignLeft="@id/points_title"
         android:layout_alignStart="@id/points_title"
-        android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp"/>
-
 
     <Button
         android:id="@+id/to_timer_button_profile"
@@ -170,46 +148,37 @@
         android:layout_height="wrap_content"
         android:text="@string/to_timer_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"/>
+
     <Button
         android:id="@+id/to_settings_button_profile"
         android:text="@string/to_settings_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_profile"
         android:layout_toEndOf="@+id/to_timer_button_profile"
-        android:layout_toRightOf="@+id/to_timer_button_profile"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
+
     <Button
         android:id="@+id/to_history_button_profile"
         android:text="@string/to_history_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_profile"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/to_profile_button_profile"
         android:layout_toStartOf="@id/to_profile_button_profile"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
+
     <Button
         android:id="@+id/to_profile_button_profile"
         android:text="@string/to_profile_button_label"
         android:textSize="@dimen/tiny_text_size"
-        android:textColor="@color/black"
         android:layout_alignTop="@+id/to_timer_button_profile"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
         android:layout_marginEnd="10dp"/>
-
 </RelativeLayout>
