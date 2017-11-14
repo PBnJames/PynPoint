@@ -7,6 +7,9 @@
         <item name="android:windowBackground">@color/twitchPurple</item>
         <item name="android:buttonStyle">@style/defaultButton</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
     <!-- Green base activity theme -->
     <style name="ActivityTheme.Primary.Base.Green" parent="Theme.AppCompat.NoActionBar">
@@ -15,6 +18,9 @@
         <item name="android:windowBackground">@color/uglyGreen</item>
         <item name="android:buttonStyle">@style/defaultButton</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="defaultButton" parent="Widget.AppCompat.Button">
