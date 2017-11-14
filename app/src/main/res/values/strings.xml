@@ -62,6 +62,7 @@ http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="overall_time_studied_textview_value">999999 h 59 m</string>
     <string name="num_of_study_sessions_textview"># of Study Sessions:</string>
     <string name="num_of_study_sessions_textview_value">999999999999</string>
+    <string name="thumbnail">Thumbnail</string>
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

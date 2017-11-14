@@ -8,12 +8,21 @@
     android:id="@+id/shopActivity">
 
     <TextView
+        android:id="@+id/shop_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/shop_title"
         android:textColor="?attr/secondaryTextColor"
         android:textSize="40sp"/>
+
+    <ListView
+        android:id="@+id/shop_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shop_title"
+        android:layout_above="@+id/to_timer_button_shop">
+    </ListView>
 
     <Button
         android:id="@+id/to_timer_button_shop"
