@@ -19,6 +19,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (App.getInstance().isPurpleEnabled()) {
+            setTheme(R.style.ActivityTheme_Primary_Base_Purple);
+        } else if(App.getInstance().isGreenEnabled()){
+            setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         toShopActivity();

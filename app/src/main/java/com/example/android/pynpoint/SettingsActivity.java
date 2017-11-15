@@ -19,6 +19,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (App.getInstance().isPurpleEnabled()) {
+            setTheme(R.style.ActivityTheme_Primary_Base_Purple);
+        } else if(App.getInstance().isGreenEnabled()){
+            setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        }
         super.onCreate(savedInstanceState);
        // setTheme(R.style.PreferenceScreen);
         addPreferencesFromResource(R.xml.pref_app);

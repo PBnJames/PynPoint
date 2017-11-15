@@ -2,11 +2,13 @@ package com.example.android.pynpoint;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -26,13 +28,19 @@ public class ShopActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (App.getInstance().isPurpleEnabled()) {
+            setTheme(R.style.ActivityTheme_Primary_Base_Purple);
+        } else if(App.getInstance().isGreenEnabled()){
+            setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
         mListView = (ListView) findViewById(R.id.shop_list_view);
 
-        ShopItem row1 = createShopItem("test1", "test2", "test3", getResources().getDrawable(R.drawable.doghead));
-        ShopItem row2 = createShopItem("test1", "test2", "test3", getResources().getDrawable(R.drawable.cathead));
+        ShopItem row1 = createShopItem("Purple", "test2", "test3", getResources().getDrawable(R.drawable.doghead));
+        ShopItem row2 = createShopItem("Green", "test2", "test3", getResources().getDrawable(R.drawable.cathead));
 
         final ArrayList<ShopItem> shopList = new ArrayList<ShopItem>();
         shopList.add(row1);
@@ -43,12 +51,33 @@ public class ShopActivity extends AppCompatActivity {
         mListView.setAdapter(adapter);
 
 
+        onListViewItemClick();
 
 
         toTimerSetActivity();
         toSettingsActivity();
         toHistoryActivity();
         toProfileActivity();
+    }
+
+    public void onListViewItemClick() {
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(position == 0){
+                    App.getInstance().setIsGreenEnabled(false);
+                    App.getInstance().setIsPurpleEnabled(true);
+                }else if(position == 1){
+                    App.getInstance().setIsGreenEnabled(true);
+                    App.getInstance().setIsPurpleEnabled(false);
+                }
+
+
+            }
+
+        });
     }
 
     public ShopItem createShopItem(String itemTitle, String itemDescription, String itemLabel, Drawable itemImage ){
