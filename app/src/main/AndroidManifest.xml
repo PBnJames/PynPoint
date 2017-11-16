@@ -26,7 +26,8 @@
         <activity android:name=".ShopActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".ReferenceActivity" />
-        <activity android:name=".TipsActivity"/>
+        <activity android:name=".TipsActivity" />
+        <activity android:name=".ResultsActivity"></activity>
     </application>
 
 </manifest>
