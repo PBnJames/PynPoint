@@ -64,6 +64,21 @@ http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="num_of_study_sessions_textview_value">999999999999</string>
     <string name="thumbnail">Thumbnail</string>
     <string name="results_title">Results</string>
+    <string name="time_studied_label">Time Studied:</string>
+    <string name="time_studied_default">99 h 59 m</string>
+    <string name="break_time_label">Break Time:</string>
+    <string name="break_time_default">99 h 59 m</string>
+    <string name="total_time_label">Total Time:</string>
+    <string name="total_time_default">99 h 59 m</string>
+    <string name="point_breakdown_label"><u>Point Breakdown</u></string>
+    <string name="points_current_label">Current Points:</string>
+    <string name="points_current_default">-999999</string>
+    <string name="points_earned_label">Points Earned:</string>
+    <string name="points_earned_default">-999999</string>
+    <string name="points_total_label">Total:</string>
+    <string name="points_total_default">-999999</string>
+
+
 
     <string-array name="study_pattern_list">
         <item>Standard</item>

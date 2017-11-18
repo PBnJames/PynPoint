@@ -7,12 +7,162 @@
     tools:context="com.example.android.pynpoint.ResultsActivity">
 
     <TextView
+        android:id="@+id/results_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/results_title"
         android:textColor="?attr/secondaryTextColor"
         android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/time_studied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/results_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/time_studied_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/time_studied_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/results_title"
+        android:layout_toEndOf="@id/time_studied"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/time_studied_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/break_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_studied"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/break_time_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/break_time_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_studied"
+        android:layout_toEndOf="@id/break_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/break_time_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/break_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/total_time_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/total_time_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/break_time"
+        android:layout_toEndOf="@id/total_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/total_time_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/point_breakdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/point_breakdown_label"
+        android:textSize="30sp"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/point_breakdown"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_current_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_current_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/point_breakdown"
+        android:layout_toEndOf="@id/points_current"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_current_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_earned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/points_current"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_earned_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_earned_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/points_current"
+        android:layout_toEndOf="@id/points_earned"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_earned_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/points_earned"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_total_label"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
+
+    <TextView
+        android:id="@+id/points_total_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/points_earned"
+        android:layout_toEndOf="@id/points_total"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/points_total_default"
+        android:textSize="@dimen/very_large_text_size"
+        android:textColor="?attr/secondaryTextColor"/>
 
     <Button
         android:id="@+id/to_timer_button_results"

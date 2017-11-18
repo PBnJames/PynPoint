@@ -27,7 +27,7 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".ReferenceActivity" />
         <activity android:name=".TipsActivity" />
-        <activity android:name=".ResultsActivity"></activity>
+        <activity android:name=".ResultsActivity"/>
     </application>
 
 </manifest>
