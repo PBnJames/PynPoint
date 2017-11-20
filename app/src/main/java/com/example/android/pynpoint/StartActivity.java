@@ -28,7 +28,11 @@ public class StartActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        toDescriptionActivity();
+        if(mPrefs.getBoolean("description_read",false)){
+            toTimerSetActivity();
+        } else {
+            toDescriptionActivity();
+        }
     }
 
     public void toDescriptionActivity() {
@@ -38,6 +42,18 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(descriptionIntent);
+                finish();
+            }
+        });
+    }
+
+    public void toTimerSetActivity() {
+        Button startScreenButton = (Button)findViewById(R.id.start_screen_button);
+        final Intent timerSetIntent = TimerSetActivity.buildIntent(this);
+        startScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(timerSetIntent);
                 finish();
             }
         });
