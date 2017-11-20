@@ -2,6 +2,8 @@ package com.example.android.pynpoint;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -15,10 +17,11 @@ public class TimerStartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        if (App.getInstance().isPurpleEnabled()) {
+        if (mPrefs.getBoolean("purple", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
-        } else if(App.getInstance().isGreenEnabled()){
+        } else if(mPrefs.getBoolean("green", false)){
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
         }
         super.onCreate(savedInstanceState);

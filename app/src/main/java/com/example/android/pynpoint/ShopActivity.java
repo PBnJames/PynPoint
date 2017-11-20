@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,9 +29,11 @@ public class ShopActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (App.getInstance().isPurpleEnabled()) {
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+        if (mPrefs.getBoolean("purple", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
-        } else if(App.getInstance().isGreenEnabled()){
+        } else if(mPrefs.getBoolean("green", false)){
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
         }
 
@@ -65,18 +68,19 @@ public class ShopActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences mPrefs =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = mPrefs.edit();
 
                 if(position == 0){
-                    App.getInstance().setIsGreenEnabled(false);
-                    App.getInstance().setIsPurpleEnabled(true);
+                    editor.putBoolean("purple", true);
+                    editor.putBoolean("green", false);
                 }else if(position == 1){
-                    App.getInstance().setIsGreenEnabled(true);
-                    App.getInstance().setIsPurpleEnabled(false);
+                    editor.putBoolean("purple", false);
+                    editor.putBoolean("green", true);
                 }
 
-
+                editor.apply();
             }
-
         });
     }
 
