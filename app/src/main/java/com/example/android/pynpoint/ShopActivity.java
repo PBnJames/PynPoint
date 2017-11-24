@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -75,8 +76,12 @@ public class ShopActivity extends AppCompatActivity {
                     editor.putBoolean("purple", true);
                     editor.putBoolean("green", false);
                 }else if(position == 1){
-                    editor.putBoolean("purple", false);
-                    editor.putBoolean("green", true);
+                    if(mPrefs.getInt("points", 0) >= 100) {
+                        editor.putBoolean("purple", false);
+                        editor.putBoolean("green", true);
+                    }else{
+                        Toast.makeText(ShopActivity.this, "Item Locked: Not enough points", Toast.LENGTH_LONG).show();
+                    }
                 }
 
                 editor.apply();
