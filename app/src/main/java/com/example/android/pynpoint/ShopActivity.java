@@ -85,6 +85,7 @@ public class ShopActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SharedPreferences mPrefs =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = mPrefs.edit();
+                editor.putInt("points", 200);
 
                 if(position == 0){
                     editor.putBoolean("purple", true);
