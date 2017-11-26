@@ -64,6 +64,7 @@ public class ShopAdapter extends BaseAdapter {
         subtitleTextView.setText(shopItem.description);
         detailTextView.setText(shopItem.label);
         thumbnailImageView.setImageDrawable(shopItem.image);
+        detailTextView.setTextColor(mContext.getResources().getColor(R.color.antiFlashWhite));
 
         return rowView;
     }

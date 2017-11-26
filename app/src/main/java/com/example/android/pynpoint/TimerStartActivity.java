@@ -45,6 +45,7 @@ public class TimerStartActivity extends AppCompatActivity {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
         } else if (mPrefs.getBoolean("green", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        } else if(mPrefs.getBoolean("red", false)){
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer_start);

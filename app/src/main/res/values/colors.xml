@@ -9,4 +9,9 @@
     <color name="antiFlashWhite">#F2F3F4</color>
     <color name="black">#000000</color>
     <color name="uglyGreen">#2F7D2F</color>
+    <color name="lighterUglyGreen">#3a9c3a</color>
+    <color name="darkerUglyGreen">#235d23 </color>
+    <color name="crimsonRed">#990000</color>
+    <color name="lighterCrimsonRed">#bf0000</color>
+    <color name="darkerCrimsonRed">#720000</color>
 </resources>
