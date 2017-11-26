@@ -29,8 +29,10 @@ public class TimerStartActivity extends AppCompatActivity {
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         if (mPrefs.getBoolean("purple", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
-        } else if (mPrefs.getBoolean("green", false)) {
+        } else if(mPrefs.getBoolean("green", false)){
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        } else if(mPrefs.getBoolean("red", false)){
+            setTheme(R.style.ActivityTheme_Primary_Base_Red);
         }
         super.onCreate(savedInstanceState);
 

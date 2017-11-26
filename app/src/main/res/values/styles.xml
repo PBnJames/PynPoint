@@ -23,6 +23,17 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="ActivityTheme.Primary.Base.Red" parent="Theme.AppCompat.NoActionBar">
+        <item name="primaryTextColor">@color/black</item>
+        <item name="secondaryTextColor">@color/antiFlashWhite</item>
+        <item name="android:windowBackground">@color/crimsonRed</item>
+        <item name="android:buttonStyle">@style/defaultButton</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
     <style name="defaultButton" parent="Widget.AppCompat.Button">
         <item name="android:textColor">@color/black</item>
         <item name="android:background">@color/antiFlashWhite</item>

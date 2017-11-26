@@ -27,6 +27,8 @@ public class SettingsActivity extends PreferenceActivity {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
         } else if(mPrefs.getBoolean("green", false)){
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
+        } else if(mPrefs.getBoolean("red", false)){
+            setTheme(R.style.ActivityTheme_Primary_Base_Red);
         }
         super.onCreate(savedInstanceState);
        // setTheme(R.style.PreferenceScreen);
