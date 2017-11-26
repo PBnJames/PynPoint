@@ -8,7 +8,7 @@
     <string name="study_pattern_title">Study Pattern</string>
     <string name="hour_label">Hour(s):</string>
     <string name="minutes_label">Minute(s):</string>
-    <string name="timer_title">Timer</string>
+    <string name="timer_title">Length</string>
     <string name="break_title">Break</string>
     <string name="interval_title">Interval</string>
     <string name="to_timer_button_label">Timer</string>
