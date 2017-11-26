@@ -72,6 +72,8 @@ public class ProfileActivity extends AppCompatActivity {
         TextView points1 = findViewById(R.id.user_points);
         points1.setText(""+points);
 
+
+
         TextView perc = findViewById(R.id.overall_percentage_complete_value);
         perc.setText(""+(double)(size-completed)/size);
 

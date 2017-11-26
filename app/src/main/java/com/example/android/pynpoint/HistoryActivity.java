@@ -38,7 +38,6 @@ public class HistoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        setContentView(R.layout.activity_history);
 
         if (mPrefs.getBoolean("purple", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
