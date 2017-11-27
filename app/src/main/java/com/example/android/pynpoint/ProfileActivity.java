@@ -72,8 +72,6 @@ public class ProfileActivity extends AppCompatActivity {
         TextView points1 = findViewById(R.id.user_points);
         points1.setText(""+points);
 
-
-
         TextView perc = findViewById(R.id.overall_percentage_complete_value);
         perc.setText(""+(double)(size-completed)/size);
 
@@ -83,9 +81,9 @@ public class ProfileActivity extends AppCompatActivity {
         TextView killme = findViewById(R.id.num_of_study_sessions_value);
         killme.setText(size+"");
 
-
-
-
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putInt("points", points);
+        editor.apply();
 
         toShopActivity();
         toHistoryActivity();

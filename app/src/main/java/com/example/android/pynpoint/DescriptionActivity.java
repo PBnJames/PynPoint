@@ -30,6 +30,9 @@ public class DescriptionActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putBoolean("description_read", true);
+        editor.apply();
         toTimerSetActivity();
     }
 
@@ -40,11 +43,6 @@ public class DescriptionActivity extends AppCompatActivity {
         descriptionScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences mPrefs =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                SharedPreferences.Editor editor = mPrefs.edit();
-
-                editor.putBoolean("description_read", true);
-                editor.apply();
                 startActivity(setTimerIntent);
                 finish();
             }

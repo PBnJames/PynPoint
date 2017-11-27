@@ -47,17 +47,17 @@ public class ShopActivity extends AppCompatActivity {
         String row2Lock = "Locked";
         String row3Lock = "Locked";
 
-        if(mPrefs.getInt("points", 0) >= 200){
+        if(mPrefs.getInt("points", 0) >= 2){
             row2Lock = "Unlocked";
             row3Lock = "Unlocked";
 
-        }else if(mPrefs.getInt("points", 0) >= 100){
+        }else if(mPrefs.getInt("points", 0) >= 1){
             row2Lock = "Unlocked";
         }
 
-        ShopItem row1 = createShopItem("Purple", "0 Points", "Unlocked", getResources().getDrawable(R.drawable.doghead));
-        ShopItem row2 = createShopItem("Green", "100 Points", row2Lock, getResources().getDrawable(R.drawable.cathead));
-        ShopItem row3 = createShopItem("Red", "200 Points", row3Lock, getResources().getDrawable(R.drawable.cathead));
+        ShopItem row1 = createShopItem("Purple", "0 Points", "Unlocked", getResources().getDrawable(R.drawable.purplebox));
+        ShopItem row2 = createShopItem("Green", "1 Points", row2Lock, getResources().getDrawable(R.drawable.greenbox));
+        ShopItem row3 = createShopItem("Red", "2 Points", row3Lock, getResources().getDrawable(R.drawable.redbox));
 
         final ArrayList<ShopItem> shopList = new ArrayList<ShopItem>();
         shopList.add(row1);
@@ -91,7 +91,7 @@ public class ShopActivity extends AppCompatActivity {
                     editor.putBoolean("green", false);
                     editor.putBoolean("red", false);
                 }else if(position == 1){
-                    if(mPrefs.getInt("points", 0) >= 100) {
+                    if(mPrefs.getInt("points", 0) >= 1) {
                         editor.putBoolean("purple", false);
                         editor.putBoolean("green", true);
                         editor.putBoolean("red", false);
@@ -99,7 +99,7 @@ public class ShopActivity extends AppCompatActivity {
                         Toast.makeText(ShopActivity.this, "Item Locked: Not enough points", Toast.LENGTH_LONG).show();
                     }
                 }else if(position == 2){
-                    if(mPrefs.getInt("points", 0) >= 200) {
+                    if(mPrefs.getInt("points", 0) >= 2) {
                         editor.putBoolean("purple", false);
                         editor.putBoolean("green", false);
                         editor.putBoolean("red", true);
