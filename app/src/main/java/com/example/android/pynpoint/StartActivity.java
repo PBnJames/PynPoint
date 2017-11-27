@@ -50,7 +50,7 @@ public class StartActivity extends AppCompatActivity {
         }
 
 
-        if(mPrefs.getBoolean("description_read",false)){
+        if(mPrefs.getBoolean("description",false)){
             toTimerSetActivity();
         } else {
             toDescriptionActivity();

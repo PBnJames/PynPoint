@@ -31,7 +31,7 @@ public class DescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
         SharedPreferences.Editor editor = mPrefs.edit();
-        editor.putBoolean("description_read", true);
+        editor.putBoolean("description", true);
         editor.apply();
         toTimerSetActivity();
     }
