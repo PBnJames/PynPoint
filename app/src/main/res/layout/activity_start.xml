@@ -15,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/test_pinpoint_title"
+        android:src="@drawable/purple2"
         android:id="@+id/pynpoint_title" />
 
     <Button

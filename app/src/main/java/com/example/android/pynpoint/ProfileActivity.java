@@ -63,22 +63,33 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
+
             TextView points1 = findViewById(R.id.user_points);
             points1.setText("" + points);
 
 
-            TextView perc = findViewById(R.id.overall_percentage_complete_value);
-            perc.setText("" + (100 - ((size*100) - completed) / (size)));
+        TextView perc = findViewById(R.id.overall_percentage_complete_value);
+        perc.setText(""+(double)(size-completed)/size);
+
+
+            TextView perc5 = findViewById(R.id.overall_percentage_complete_value);
+            perc5.setText("" + (100 - ((size*100) - completed) / (size)));
 
             TextView tacos = findViewById(R.id.overall_time_studied_value);
             tacos.setText("" + points);
 
+
             TextView killme = findViewById(R.id.num_of_study_sessions_value);
             killme.setText(size + "");
 
-        }
 
 
+
+
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putInt("points", points);
+        editor.apply();
+    }
 
         toShopActivity();
         toHistoryActivity();
