@@ -62,18 +62,21 @@ public class TimerStartActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         final int timerMinutes = Integer.parseInt(bundle.getString("TM"));
         final int timerHours = Integer.parseInt(bundle.getString("TH"));
-        int intervalMinutes = Integer.parseInt(bundle.getString("IM"));
-        int intervalHours = Integer.parseInt(bundle.getString("IH"));
-        int breakMinutes = Integer.parseInt(bundle.getString("BM"));
-        int breakHours = Integer.parseInt(bundle.getString("BH"));
+        final int intervalMinutes = Integer.parseInt(bundle.getString("IM"));
+        final int intervalHours = Integer.parseInt(bundle.getString("IH"));
+        final int breakMinutes = Integer.parseInt(bundle.getString("BM"));
+        final int breakHours = Integer.parseInt(bundle.getString("BH"));
 
         //Log.d("debug", "checkpoint7");//debug
-
+        //database.userDao().removeAllUsers();
         //Conversion to miliseconds from respective times
         final int timer = (60000 * (timerMinutes)) + ((timerHours * 3600000));
         final int breaks = (60000 * (breakMinutes)) + ((breakHours * 3600000));
         final int interval = (60000 * (intervalMinutes)) + ((intervalHours * 3600000));
 
+
+        if(breaks!=0 ||interval!=0)
+        {
         //Algorithm to determine the timer lengths. declared as final to be able to use in other methods.
         final int intervalRemainder, breakRemainder;
         final int totalLength = timer / (breaks + interval); //used to find out how many loops of "study and break" there are
@@ -88,8 +91,7 @@ public class TimerStartActivity extends AppCompatActivity {
             breakRemainder = remainder - interval;
         }
 
-        if(breaks!=0 ||interval!=0)
-        {
+
 
 
 
@@ -107,6 +109,13 @@ public class TimerStartActivity extends AppCompatActivity {
                 final int y=x;
 
                 List<User> user = database.userDao().getAllUser();
+
+                /*database.userDao().removeAllUsers();
+                //false data
+                database.userDao().addUser(new User(0, ""+1 + " h " + 20 + " m", "" + "date", "20", "" + "80"));
+                database.userDao().addUser(new User(2, ""+2 + " h " + 30 + " m", "" + "date", "100", "" + "60"));
+                database.userDao().addUser(new User(1, ""+3 + " h " + 0 + " m", "" + "date", "60", "" + "120"));
+                */
                 database.userDao().addUser(new User(x, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), "X", "" + ((interval * totalLength) + intervalRemainder) / 60000));
 
                // User user2 = new User(i,"24234","","12312","123");
@@ -115,10 +124,7 @@ public class TimerStartActivity extends AppCompatActivity {
                 List<User> user23 = database.userDao().getAllUser();
                 Log.d("debug", "checkpoint7" + user23.size());
 
-                if(user.size()==6)
-                {
-                    database.userDao().removeAllUsers();
-                }
+
 
             {
                 //default starts with study interval declared here first to start.
@@ -127,19 +133,41 @@ public class TimerStartActivity extends AppCompatActivity {
                // Log.d("debug", "checkpoint8"+date.substring(4,11)+date.substring(date.length()-4,date.length()));//debug
                 //totalTimeLeft Timer. The timers run in parallel. IE totalTimeleft runs at the same time the others do as well.
                 new CountDownTimer(timer, 1000) //timer is total timer, 1000 is the countdown tick. IE settext updates every second
+            {
+                public void onTick(long millisUntilFinished) {
+                    //Calculations to display hours and minutes. Can also include seconds, but I opted out. Can easily readd.
+                    totalTimeLeft.setText("Hours:" + TimeUnit.MILLISECONDS.toHours(millisUntilFinished) + "   Minutes:" + (TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))));
+                }
+
+                //is called when timer is done
+                public void onFinish() {
+                    // timer defaults to one rather than 0. Added a 0 for more plesant look.
+                    totalTimeLeft.setText("Hours:0   Minutes:0 ");
+
+                }
+            }.start();
+             //server updates
+                int calculator=timer/100;
+
+            new CountDownTimer(timer, calculator)
+            {
+                int l=0;
+                public void onTick(long millisUntilFinished)
                 {
-                    public void onTick(long millisUntilFinished) {
-                        //Calculations to display hours and minutes. Can also include seconds, but I opted out. Can easily readd.
-                        totalTimeLeft.setText("Hours:" + TimeUnit.MILLISECONDS.toHours(millisUntilFinished) + "   Minutes:" + (TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))));
-                    }
+                    int z=y;
+                    l++;
+                    List<User> user = database.userDao().getAllUser();
+                    database.userDao().addUser(new User(z, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), l+"", "" + ((interval * totalLength) + intervalRemainder) / 60000));
 
-                    //is called when timer is done
-                    public void onFinish() {
-                        // timer defaults to one rather than 0. Added a 0 for more plesant look.
-                        totalTimeLeft.setText("Hours:0   Minutes:0 ");
+                }
 
-                    }
-                }.start();
+
+                public void onFinish()
+                {
+
+
+                }
+            }.start();
 
 
 
@@ -215,7 +243,8 @@ public class TimerStartActivity extends AppCompatActivity {
                                         toTimerSetActivity();
 
                                         List<User> user = database.userDao().getAllUser();
-                                        database.userDao().addUser(new User(y, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), "100%", "" + ((interval * totalLength) + intervalRemainder) / 60000));
+                                        database.userDao().addUser(new User(y, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), "100", "" + ((interval * totalLength) + intervalRemainder) / 60000));
+                                        toResultsActivity();
 
 
 
@@ -238,7 +267,7 @@ public class TimerStartActivity extends AppCompatActivity {
                                         }
                                     }
                                 });*/
-                                    }
+                                   }
 
                                 }.start();
 
@@ -249,6 +278,11 @@ public class TimerStartActivity extends AppCompatActivity {
 
             }
         }
+        else
+            {
+                toTimerSetActivity();
+            }
+
 
     }
     private void updateData(int I)
@@ -266,6 +300,16 @@ public class TimerStartActivity extends AppCompatActivity {
                 startActivity(timerSetIntent);
                 finish();
     }
+
+    public void toResultsActivity()
+    {
+
+        final Intent ResultsIntent = ResultsActivity.buildIntent(this);
+                startActivity(ResultsIntent);
+                finish();
+    }
+
+
 
 
 

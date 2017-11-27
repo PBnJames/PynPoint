@@ -76,13 +76,12 @@
         android:id="@+id/total_time_default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/break_time"
-        android:layout_toEndOf="@id/total_time"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignBaseline="@+id/total_time"
+        android:layout_alignBottom="@+id/total_time"
+        android:layout_alignEnd="@+id/to_history_button_results"
         android:text="@string/total_time_default"
-        android:textSize="@dimen/very_large_text_size"
-        android:textColor="?attr/secondaryTextColor"/>
+        android:textColor="?attr/secondaryTextColor"
+        android:textSize="@dimen/very_large_text_size" />
 
     <TextView
         android:id="@+id/point_breakdown"

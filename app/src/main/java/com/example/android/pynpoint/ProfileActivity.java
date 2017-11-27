@@ -42,48 +42,41 @@ public class ProfileActivity extends AppCompatActivity {
         List<User> user = database.userDao().getAllUser();
         int size=user.size();
         Log.d("debug", "checkpoint79" + user.size());
-
-        int completed=0;
-        int points=0;
-        int hours=0;
-        int minutes=0;
-        for(int i=0;i<size;i++)//points, complete, time,  numunm
+        if(user.size()!=0)
         {
-            if( user.get(i).complete.equals("100%"))
+            int completed = 0;
+            int points = 0;
+            int hours = 0;
+            int minutes = 0;
+            for (int i = 0; i < size; i++)//points, complete, time,  numunm
             {
-                completed++;
-                points=points+Integer.parseInt(user.get(i).points);
-                hours=hours+Integer.parseInt(user.get(i).length.substring(0,1).replaceAll("\\s",""));
-                int measure=user.get(i).length.length();
-                minutes=minutes+Integer.parseInt(user.get(i).length.substring(measure-3,measure-1).replaceAll("\\s",""));
+
+                    completed= completed+Integer.parseInt(user.get(i).complete);
+                    int tacobell=Integer.parseInt(user.get(i).points)*(Integer.parseInt(user.get(i).complete));
+                    points = points + (tacobell/100);
+
+                hours = hours+  Integer.parseInt(user.get(size-1).length.substring(0, 1).replaceAll("\\s", ""));
+                minutes = minutes+ Integer.parseInt(user.get(size-1).length.substring(4,6).replaceAll("\\s", ""));
+                Log.d("debug", "checkpoint79   " + Integer.parseInt(user.get(i).points)+"   "+Integer.parseInt(user.get(i).complete) +"");
+
             }
 
+
+
+            TextView points1 = findViewById(R.id.user_points);
+            points1.setText("" + points);
+
+
+            TextView perc = findViewById(R.id.overall_percentage_complete_value);
+            perc.setText("" + (100 - ((size*100) - completed) / (size)));
+
+            TextView tacos = findViewById(R.id.overall_time_studied_value);
+            tacos.setText("" + points);
+
+            TextView killme = findViewById(R.id.num_of_study_sessions_value);
+            killme.setText(size + "");
+
         }
-        boolean checker=false;
-        if(user.get(0).complete.equals("100%"))
-        {
-            checker=true;
-            Log.d("debug", "checkpoint7567579" + user.size());
-        }
-        Log.d("debug", "checkpoint79" + user.size()+""+points+" "+completed+" "+hours+""+user.get(0).complete+":");
-
-
-
-        TextView points1 = findViewById(R.id.user_points);
-        points1.setText(""+points);
-
-
-
-        TextView perc = findViewById(R.id.overall_percentage_complete_value);
-        perc.setText(""+(double)(size-completed)/size);
-
-        TextView tacos = findViewById(R.id.overall_time_studied_value);
-        tacos.setText(""+points);
-
-        TextView killme = findViewById(R.id.num_of_study_sessions_value);
-        killme.setText(size+"");
-
-
 
 
 
