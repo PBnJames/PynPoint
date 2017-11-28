@@ -3,6 +3,7 @@ package com.example.android.pynpoint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -64,23 +74,18 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-            TextView points1 = findViewById(R.id.user_points);
-            points1.setText("" + points);
+            TextView pointsTextView = findViewById(R.id.user_points);
+            pointsTextView.setText("" + points);
+
+            TextView overallPercentageCompleteTextView = findViewById(R.id.overall_percentage_complete_value);
+            overallPercentageCompleteTextView.setText("" + (100 - ((size*100) - completed) / (size)));
+
+            TextView overallTimeStudiedTextView = findViewById(R.id.overall_time_studied_value);
+            overallTimeStudiedTextView.setText("" + points);
 
 
-        TextView perc = findViewById(R.id.overall_percentage_complete_value);
-        perc.setText(""+(double)(size-completed)/size);
-
-
-            TextView perc5 = findViewById(R.id.overall_percentage_complete_value);
-            perc5.setText("" + (100 - ((size*100) - completed) / (size)));
-
-            TextView tacos = findViewById(R.id.overall_time_studied_value);
-            tacos.setText("" + points);
-
-
-            TextView killme = findViewById(R.id.num_of_study_sessions_value);
-            killme.setText(size + "");
+            TextView numOfStudySessionsTextView = findViewById(R.id.num_of_study_sessions_value);
+            numOfStudySessionsTextView.setText(size + "");
 
 
 
@@ -88,8 +93,62 @@ public class ProfileActivity extends AppCompatActivity {
 
         SharedPreferences.Editor editor = mPrefs.edit();
         editor.putInt("points", points);
+        editor.putInt("overallpercentage", (100 - ((size*100) - completed) / (size)));
         editor.apply();
     }
+
+        PieChart chart = (PieChart) findViewById(R.id.pie_chart);
+        chart.setUsePercentValues(true);
+        chart.getDescription().setEnabled(false);
+        chart.setDrawHoleEnabled(true);
+        chart.setHoleColor(getResources().getColor(R.color.antiFlashWhite));
+        chart.setHoleRadius(15f);
+        chart.setTransparentCircleRadius(20f);
+        Legend l = chart.getLegend();
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
+
+        chart.setEntryLabelColor(getResources().getColor(R.color.black));
+        chart.setEntryLabelTextSize(12f);
+        ArrayList<PieEntry> PieEntry = new ArrayList<>();
+        int percentValue = mPrefs.getInt("overallpercentage", 0);
+        PieEntry.add(new PieEntry(percentValue, "% Complete"));
+        PieEntry.add(new PieEntry(100-percentValue, "% Incomplete"));
+
+        PieDataSet dataSet = new PieDataSet(PieEntry, "");
+        dataSet.setSliceSpace(3);
+        dataSet.setSelectionShift(5);
+
+        // add many colors
+        ArrayList<Integer> colors = new ArrayList<Integer>();
+
+        for (int c : ColorTemplate.VORDIPLOM_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.JOYFUL_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.LIBERTY_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.PASTEL_COLORS)
+            colors.add(c);
+
+        colors.add(ColorTemplate.getHoloBlue());
+        dataSet.setColors(colors);
+
+
+        PieData data = new PieData(dataSet);
+        data.setValueFormatter(new PercentFormatter());
+        data.setValueTextSize(11f);
+        data.setValueTextColor(Color.GRAY);
+        chart.setData(data);
+
+
+
+
 
         toShopActivity();
         toHistoryActivity();
