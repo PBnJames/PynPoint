@@ -86,7 +86,14 @@ public class TimerSetActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
 
+    protected void onPause(){
+        finish();
+
+        super.onPause();
+
+    }
 
     public void toTimerStartActivity() {
         Button startScreenButton = (Button)findViewById(R.id.start_timer_button);

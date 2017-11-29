@@ -37,7 +37,9 @@ public class TimerStartActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
+
 
 
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -149,6 +151,7 @@ public class TimerStartActivity extends AppCompatActivity {
              //server updates
                 int calculator=timer/100;
 
+
             new CountDownTimer(timer, calculator)
             {
                 int l=0;
@@ -160,6 +163,7 @@ public class TimerStartActivity extends AppCompatActivity {
                     database.userDao().addUser(new User(z, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), l+"", "" + ((interval * totalLength) + intervalRemainder) / 60000));
 
                 }
+
 
 
                 public void onFinish()
@@ -301,6 +305,21 @@ public class TimerStartActivity extends AppCompatActivity {
                 finish();
     }
 
+    @Override
+
+    protected void onPause()
+    {
+        finish();
+
+        super.onPause();
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        android.os.Process.killProcess(android.os.Process.myPid());
+        // This above line close correctly
+    }
     public void toResultsActivity()
     {
 
