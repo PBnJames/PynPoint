@@ -310,7 +310,7 @@ public class TimerStartActivity extends AppCompatActivity {
     protected void onPause()
     {
         finish();
-
+        android.os.Process.killProcess(android.os.Process.myPid());
         super.onPause();
 
     }
