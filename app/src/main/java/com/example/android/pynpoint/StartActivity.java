@@ -49,8 +49,9 @@ public class StartActivity extends AppCompatActivity {
             mImageView.setImageDrawable(red);
         }
 
-
-        if(mPrefs.getBoolean("description",false)){
+        if(mPrefs.getBoolean("enabletutorial", false)){
+            toTipsActivity();
+        }else if(mPrefs.getBoolean("description",false)){
             toTimerSetActivity();
         } else {
             toDescriptionActivity();
@@ -76,6 +77,18 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(timerSetIntent);
+                finish();
+            }
+        });
+    }
+
+    public void toTipsActivity() {
+        Button startScreenButton = (Button)findViewById(R.id.start_screen_button);
+        final Intent tipsIntent = TipsActivity.buildIntent(this);
+        startScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(tipsIntent);
                 finish();
             }
         });

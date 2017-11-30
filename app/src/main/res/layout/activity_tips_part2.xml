@@ -14,7 +14,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tip1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tips_title"
+        android:textColor="?attr/secondaryTextColor"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip2"
         android:textColor="?attr/secondaryTextColor"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
