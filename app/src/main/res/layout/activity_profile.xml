@@ -16,7 +16,7 @@
         android:textSize="40sp"
         android:textColor="?attr/secondaryTextColor"/>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/profile_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

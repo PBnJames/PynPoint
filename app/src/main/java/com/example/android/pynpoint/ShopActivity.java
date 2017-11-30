@@ -46,8 +46,14 @@ public class ShopActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.shop_list_view);
         String row2Lock = "Locked";
         String row3Lock = "Locked";
+        String row5Lock = "Locked";
 
-        if(mPrefs.getInt("points", 0) >= 2){
+        if(mPrefs.getInt("points", 0)>= 3){
+            row2Lock = "Unlocked";
+            row3Lock = "Unlocked";
+            row5Lock = "Unlocked";
+
+        } else if(mPrefs.getInt("points", 0) >= 2){
             row2Lock = "Unlocked";
             row3Lock = "Unlocked";
 
@@ -58,11 +64,15 @@ public class ShopActivity extends AppCompatActivity {
         ShopItem row1 = createShopItem("Purple", "0 Points", "Unlocked", getResources().getDrawable(R.drawable.purplebox));
         ShopItem row2 = createShopItem("Green", "1 Points", row2Lock, getResources().getDrawable(R.drawable.greenbox));
         ShopItem row3 = createShopItem("Red", "2 Points", row3Lock, getResources().getDrawable(R.drawable.redbox));
+        ShopItem row4 = createShopItem("Dog Icon", "0 Points", "Unlocked",getResources().getDrawable(R.drawable.doghead));
+        ShopItem row5 = createShopItem("Cat Icon", "3 Points", row5Lock,getResources().getDrawable(R.drawable.cathead));
 
         final ArrayList<ShopItem> shopList = new ArrayList<ShopItem>();
         shopList.add(row1);
         shopList.add(row2);
         shopList.add(row3);
+        shopList.add(row4);
+        shopList.add(row5);
 
 
         ShopAdapter adapter = new ShopAdapter(this, shopList);
@@ -103,6 +113,16 @@ public class ShopActivity extends AppCompatActivity {
                         editor.putBoolean("purple", false);
                         editor.putBoolean("green", false);
                         editor.putBoolean("red", true);
+                    }else{
+                        Toast.makeText(ShopActivity.this, "Item Locked: Not enough points", Toast.LENGTH_LONG).show();
+                    }
+                }else if(position == 3){
+                    editor.putBoolean("dog",true);
+                    editor.putBoolean("cat", false);
+                }else if(position == 4){
+                    if(mPrefs.getInt("points", 0) >= 3) {
+                        editor.putBoolean("dog",false);
+                        editor.putBoolean("cat", true);
                     }else{
                         Toast.makeText(ShopActivity.this, "Item Locked: Not enough points", Toast.LENGTH_LONG).show();
                     }

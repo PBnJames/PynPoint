@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -26,6 +27,7 @@ import java.util.List;
 
 public class ProfileActivity extends AppCompatActivity {
     private AppDatabase database;
+    private ImageView mImageView;
     public static Intent buildIntent(Context context){
         Intent intent = new Intent(context, ProfileActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -46,6 +48,13 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        mImageView = (ImageView) findViewById(R.id.profile_image);
+
+        if(mPrefs.getBoolean("cat", false)){
+            mImageView.setImageResource(R.drawable.cathead);
+        }else{
+            mImageView.setImageResource(R.drawable.doghead);
+        }
 
         database = AppDatabase.getDatabase(getApplicationContext());
 
