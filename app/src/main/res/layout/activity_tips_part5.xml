@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.pynpoint.TipsActivity">
+    tools:context="com.example.android.pynpoint.TipsPart5Activity">
 
     <ImageView
         android:layout_width="fill_parent"
@@ -22,10 +22,10 @@
         android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/next_tip_button_tip1"
+        android:id="@+id/next_tip_button_tip5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next_tip_button"
+        android:text="@string/start_button"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="10dp"

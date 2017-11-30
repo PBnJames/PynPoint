@@ -9,10 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TipsActivity extends AppCompatActivity {
+public class TipsPart3Activity extends AppCompatActivity {
 
     public static Intent buildIntent(Context context){
-        Intent intent = new Intent(context, TipsActivity.class);
+        Intent intent = new Intent(context, TipsPart3Activity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
     }
@@ -29,19 +29,18 @@ public class TipsActivity extends AppCompatActivity {
             setTheme(R.style.ActivityTheme_Primary_Base_Red);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tips);
-
-        toTip2Activity();
+        setContentView(R.layout.activity_tips_part3);
+        toTip4Activity();
     }
 
-    public void toTip2Activity() {
-        Button tip1Button = (Button)findViewById(R.id.next_tip_button_tip1);
-        final Intent tip2Intent = TipsPart2Activity.buildIntent(this);
+    public void toTip4Activity() {
+        Button tip3Button = (Button)findViewById(R.id.next_tip_button_tip3);
+        final Intent tip4Intent = TipsPart4Activity.buildIntent(this);
 
-        tip1Button.setOnClickListener(new View.OnClickListener() {
+        tip3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(tip2Intent);
+                startActivity(tip4Intent);
                 finish();
             }
         });

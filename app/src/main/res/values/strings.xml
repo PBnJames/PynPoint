@@ -77,7 +77,8 @@ http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="points_earned_default">0</string>
     <string name="points_total_label">Total:</string>
     <string name="points_total_default">0</string>
-
+    <string name="next_tip_button">Next Tip</string>
+    <string name="tip1">Choose the type of study pattern you want. The default values will show in the boxes below.</string>
 
 
     <string-array name="study_pattern_list">

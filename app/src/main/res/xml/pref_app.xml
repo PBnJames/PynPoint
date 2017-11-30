@@ -5,19 +5,19 @@
         <Preference/>
         <CheckBoxPreference
             android:title="Quit button enabled"
-            android:key="enable_quit_button"
+            android:key="enablequitbutton"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
         <CheckBoxPreference
             android:title="Tutorial on Start"
-            android:key="enable_tutorial"
+            android:key="enabletutorial"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
         <CheckBoxPreference
             android:title="Hide Timer"
-            android:key="disable_timer"
+            android:key="disabletimer"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />

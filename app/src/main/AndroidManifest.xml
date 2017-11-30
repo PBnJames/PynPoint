@@ -26,7 +26,11 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".ReferenceActivity" />
         <activity android:name=".TipsActivity" />
-        <activity android:name=".ResultsActivity"/>
+        <activity android:name=".ResultsActivity" />
+        <activity android:name=".TipsPart2Activity" />
+        <activity android:name=".TipsPart3Activity" />
+        <activity android:name=".TipsPart4Activity" />
+        <activity android:name=".TipsPart5Activity"></activity>
     </application>
 
 </manifest>
