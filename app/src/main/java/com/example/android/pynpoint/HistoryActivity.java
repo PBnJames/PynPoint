@@ -59,24 +59,103 @@ public class HistoryActivity extends AppCompatActivity {
 
         //database.userDao().removeAllUsers();
 
-        if(user.size()!=0)
-        {
+        if(user.size()!=0) {
             Log.d("debug", "checkpoint8" + user.size());
 
-            TextView Date1 = findViewById(R.id.row_1_date);
-            String text = " " + user.get(0).date;
-            Date1.setText(text);
-            TextView length1 = findViewById(R.id.row_1_length);
-            String text2 = user.get(0).length + "";
-            length1.setText(text2);
-            TextView comp1 = findViewById(R.id.row_1_percent_complete);
-            String text3 = user.get(0).complete;
-            comp1.setText(text3);
-            TextView points1 = findViewById(R.id.row_1_points);
-            String text4 = user.get(0).points;
-            points1.setText(text4);
+
             int x = user.size();
-            if (user.size() > 1) {
+
+            int f, f1, f2, f3, f4;
+            int s1 = user.size();
+            if (user.size() > 5)
+            {
+                TextView Date1 = findViewById(R.id.row_1_date);
+                String text = " " + user.get(s1-1).date;
+                Date1.setText(text);
+                TextView length1 = findViewById(R.id.row_1_length);
+                String text2 = user.get(s1-1).length + "";
+                length1.setText(text2);
+                TextView comp1 = findViewById(R.id.row_1_percent_complete);
+                String text3 = user.get(s1-1).complete;
+                comp1.setText(text3);
+                TextView points1 = findViewById(R.id.row_1_points);
+                String text4 = user.get(s1-1).points;
+                points1.setText(text4);
+
+                if (user.size() > 1) {
+
+                    TextView Date12 = findViewById(R.id.row_2_date);
+                    String text12 = user.get(s1-2).date + " ";
+                    Date12.setText(text12);
+                    TextView length12 = findViewById(R.id.row_2_length);
+                    String text22 = user.get(s1-2).length;
+                    length12.setText(text22);
+                    TextView comp12 = findViewById(R.id.row_2_percent_complete);
+                    String text32 = user.get(s1-2).complete;
+                    comp12.setText(text32);
+                    TextView points12 = findViewById(R.id.row_2_points);
+                    String text42 = user.get(s1-2).points;
+                    points12.setText(text42);
+                }
+                if (user.size() > 2) {
+                    TextView Date13 = findViewById(R.id.row_3_date);
+                    String text13 = user.get(s1-3).date + " ";
+                    Date13.setText(text13);
+                    TextView length13 = findViewById(R.id.row_3_length);
+                    String text23 = user.get(s1-3).length;
+                    length13.setText(text23);
+                    TextView comp13 = findViewById(R.id.row_3_percent_complete);
+                    String text33 = user.get(s1-3).complete;
+                    comp13.setText(text33);
+                    TextView points13 = findViewById(R.id.row_3_points);
+                    String text43 = user.get(s1-3).points;
+                    points13.setText(text43);
+                }
+                if (user.size() > 3) {
+                    TextView Date14 = findViewById(R.id.row_4_date);
+                    String text14 = user.get(s1-4).date + " ";
+                    Date14.setText(text14);
+                    TextView length14 = findViewById(R.id.row_4_length);
+                    String text24 = user.get(s1-4).length + " ";
+                    length14.setText(text24);
+                    TextView comp14 = findViewById(R.id.row_4_percent_complete);
+                    String text34 = user.get(s1-4).complete;
+                    comp14.setText(text34);
+                    TextView points14 = findViewById(R.id.row_4_points);
+                    String text44 = user.get(s1-4).points;
+                    points14.setText(text44);
+                }
+                if (user.size() > 4) {
+                    TextView Date14 = findViewById(R.id.row_5_date);
+                    String text14 = user.get(s1-5).date + " ";
+                    Date14.setText(text14);
+                    TextView length14 = findViewById(R.id.row_5_length);
+                    String text24 = user.get(s1-5).length + " ";
+                    length14.setText(text24);
+                    TextView comp14 = findViewById(R.id.row_5_percent_complete);
+                    String text34 = user.get(s1-5).complete;
+                    comp14.setText(text34);
+                    TextView points14 = findViewById(R.id.row_5_points);
+                    String text44 = user.get(s1-4).points;
+                    points14.setText(text44);
+                }
+            }
+            else
+            {
+                TextView Date1 = findViewById(R.id.row_1_date);
+                String text = " " + user.get(0).date;
+                Date1.setText(text);
+                TextView length1 = findViewById(R.id.row_1_length);
+                String text2 = user.get(0).length + "";
+                length1.setText(text2);
+                TextView comp1 = findViewById(R.id.row_1_percent_complete);
+                String text3 = user.get(0).complete;
+                comp1.setText(text3);
+                TextView points1 = findViewById(R.id.row_1_points);
+                String text4 = user.get(0).points;
+                points1.setText(text4);
+
+                if (user.size() > 1) {
 
                 TextView Date12 = findViewById(R.id.row_2_date);
                 String text12 = user.get(1).date + " ";
@@ -133,6 +212,7 @@ public class HistoryActivity extends AppCompatActivity {
                 String text44 = user.get(4).points;
                 points14.setText(text44);
             }
+        }
         }
 
 

@@ -4,6 +4,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -21,7 +26,6 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Toast;
 import java.util.Calendar;
-
 import java.util.List;
 
 
@@ -105,19 +109,19 @@ public class TimerStartActivity extends AppCompatActivity {
             Date currentTime = Calendar.getInstance().getTime();
             final String date=""+ currentTime;
 
-
-
-                int x = users.size() + 1;
+            if (users.size()<2) {
+                database.userDao().addUser(new User(0, "" + 1 + " h " + 20 + " m", "" + "Dec 03 2017", "20", "" + "80"));
+                database.userDao().addUser(new User(2, "" + 2 + " h " + 30 + " m", "" + "Dec 03 2017", "100", "" + "60"));
+                database.userDao().addUser(new User(1, "" + 3 + " h " + 0 + " m", "" + "Dec 03 2017", "60", "" + "120"));
+                database.userDao().addUser(new User(3, "" + 2 + " h " + 0 + " m", "" + "Dec 03 2017", "50", "" + "100"));
+            }
+            int x = users.size() + 1;
                 final int y=x;
 
                 List<User> user = database.userDao().getAllUser();
 
-                /*database.userDao().removeAllUsers();
-                //false data
-                database.userDao().addUser(new User(0, ""+1 + " h " + 20 + " m", "" + "date", "20", "" + "80"));
-                database.userDao().addUser(new User(2, ""+2 + " h " + 30 + " m", "" + "date", "100", "" + "60"));
-                database.userDao().addUser(new User(1, ""+3 + " h " + 0 + " m", "" + "date", "60", "" + "120"));
-                */
+
+
                 database.userDao().addUser(new User(x, timerHours + " h " + timerMinutes + " m", "" + date.substring(4, 11) + date.substring(date.length() - 4, date.length()), "X", "" + ((interval * totalLength) + intervalRemainder) / 60000));
 
                // User user2 = new User(i,"24234","","12312","123");
@@ -235,6 +239,7 @@ public class TimerStartActivity extends AppCompatActivity {
 
                             public void onFinish() {
 
+
                                 new CountDownTimer(breakRemainder, 1000) {
                                     public void onTick(long millisUntilFinished) {
                                         intervalTime.setText("Hours:" + TimeUnit.MILLISECONDS.toHours(millisUntilFinished) + " Minutes:" + (TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))) + ":" +
@@ -242,6 +247,7 @@ public class TimerStartActivity extends AppCompatActivity {
                                     }
 
                                     public void onFinish() {
+
                                         currentText.setText("Done Studying!"); //finishing message
                                         intervalTime.setText("Hours:0 Minutes:0 Seconds:0");     // add anything that needs to be added here. IE send intent/ update server ect.
                                         toTimerSetActivity();
@@ -284,6 +290,7 @@ public class TimerStartActivity extends AppCompatActivity {
         }
         else
             {
+                Toast.makeText(TimerStartActivity.this, "Invalid Time", Toast.LENGTH_LONG).show();
                 toTimerSetActivity();
             }
 
@@ -293,7 +300,7 @@ public class TimerStartActivity extends AppCompatActivity {
     {
         List<User> user = database.userDao().getAllUser();
         List<Table> trophiesForUser = database.trophyDao().findTrophiesForUser(user.get(I).id);
-        TextView textView2 = findViewById(R.id.result);
+
 
 
     }
@@ -327,8 +334,6 @@ public class TimerStartActivity extends AppCompatActivity {
                 startActivity(ResultsIntent);
                 finish();
     }
-
-
 
 
 

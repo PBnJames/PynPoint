@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -45,6 +46,72 @@ public class TimerSetActivity extends AppCompatActivity {
         setSpinners(R.id.break_minute_spinner, 60);
         setSpinners(R.id.interval_hour_spinner, 17);
         setSpinners(R.id.interval_minute_spinner, 60);
+
+        final Spinner THSpinner=(Spinner) findViewById(R.id.timer_hour_spinner);
+
+
+        final Spinner TMSpinner=(Spinner) findViewById(R.id.timer_minute_spinner);
+
+
+        final Spinner IHSpinner=(Spinner) findViewById(R.id.interval_hour_spinner);
+
+
+        final Spinner IMSpinner=(Spinner) findViewById(R.id.interval_minute_spinner);
+
+
+        final Spinner BHSpinner=(Spinner) findViewById(R.id.break_hour_spinner);
+
+
+        final Spinner BMSpinner1=(Spinner) findViewById(R.id.break_minute_spinner);
+
+
+
+        final Spinner BMSpinner=(Spinner) findViewById(R.id.study_pattern_spinner);
+
+
+        BMSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
+            {
+                String IM = BMSpinner.getSelectedItem().toString();
+                Log.d("myTag", "This is my df"+IM);
+                if(IM.equals("Standard")==true)
+                {
+                    BMSpinner1.setSelection(5);
+                    IMSpinner.setSelection(30);
+                    THSpinner.setSelection(2);
+
+                    BHSpinner.setSelection(0);
+                    IHSpinner.setSelection(0);
+                    TMSpinner.setSelection(0);
+                }
+                else if(IM.equals("Rapidfire")==true)
+                {
+                    BMSpinner1.setSelection(5);
+                    IMSpinner.setSelection(15);
+                    THSpinner.setSelection(2);
+                    BHSpinner.setSelection(0);
+                    IHSpinner.setSelection(0);
+                    TMSpinner.setSelection(0);
+                }
+                else if(IM.equals("Optimized")==true)
+                {
+                    BMSpinner1.setSelection(10);
+                    IMSpinner.setSelection(45);
+                    THSpinner.setSelection(2);
+                    BHSpinner.setSelection(0);
+                    IHSpinner.setSelection(0);
+                    TMSpinner.setSelection(0);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
 
         toTimerStartActivity();
         toSettingsActivity();
