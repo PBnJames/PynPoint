@@ -84,6 +84,11 @@ http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="tip3">Choose how long your breaks are.</string>
     <string name="tip4">Choose how long your study intervals are.</string>
     <string name="tip5">Press start and begin focusing!</string>
+    <string name="total_time_left_title_textview"><u>Total Time Left:</u></string>
+    <string name="current_task_title_textview"><u>Current Task:</u></string>
+    <string name="interval_time_title_textview"><u>Interval Time:</u></string>
+    <string name="default_timer_start_value">Hours:99 Minutes:59 Seconds:59</string>
+    <string name="default_total_time_left">Hours:99 Minutes:59</string>
 
 
     <string-array name="study_pattern_list">

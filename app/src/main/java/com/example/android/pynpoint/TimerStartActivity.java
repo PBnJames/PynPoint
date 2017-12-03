@@ -47,12 +47,15 @@ public class TimerStartActivity extends AppCompatActivity {
 
 
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
         if (mPrefs.getBoolean("purple", false)) {
             setTheme(R.style.ActivityTheme_Primary_Base_Purple);
-        } else if (mPrefs.getBoolean("green", false)) {
+        } else if(mPrefs.getBoolean("green", false)){
             setTheme(R.style.ActivityTheme_Primary_Base_Green);
         } else if(mPrefs.getBoolean("red", false)){
+            setTheme(R.style.ActivityTheme_Primary_Base_Red);
         }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer_start);
 
@@ -60,9 +63,9 @@ public class TimerStartActivity extends AppCompatActivity {
 
         //declares textboxes and makes them editable
 
-        final TextView intervalTime = (TextView) findViewById(R.id.intervalTime);
-        final TextView currentText = (TextView) findViewById(R.id.currentTask);
-        final TextView totalTimeLeft = (TextView) findViewById(R.id.totalTimeLeft);
+        final TextView intervalTime = (TextView) findViewById(R.id.interval_time_default);
+        final TextView currentText = (TextView) findViewById(R.id.current_task_default);
+        final TextView totalTimeLeft = (TextView) findViewById(R.id.total_time_left_default);
 
         //draws values from spinner data see TimerSetActivity
         Bundle bundle = getIntent().getExtras();
@@ -348,7 +351,7 @@ public class TimerStartActivity extends AppCompatActivity {
     protected void onDestroy(Bundle savedInstanceState)
     {
         setContentView(R.layout.activity_timer_start);
-        final TextView totalTimeLeft = (TextView) findViewById(R.id.totalTimeLeft);
+        final TextView totalTimeLeft = (TextView) findViewById(R.id.total_time_left_default);
 
         int leftovertime=Integer.parseInt(totalTimeLeft.toString()); // need to parse the string to seperate but it shows remaining time.
 

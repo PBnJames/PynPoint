@@ -8,68 +8,70 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/total_time_left_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="100dp"
         android:textColor="?attr/secondaryTextColor"
-        android:textSize="20sp"
-        android:text="Total Time Left:" />
+        android:textSize="@dimen/very_large_text_size"
+        android:text="@string/total_time_left_title_textview" />
 
 
     <TextView
-        android:id="@+id/totalTimeLeft"
+        android:id="@+id/total_time_left_default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="21dp"
-        android:textColor="?attr/secondaryTextColor"
-
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/totalTimeLeft"
-        android:layout_below="@+id/totalTimeLeft"
-        android:layout_marginTop="82dp"
-        android:text="Current Task:"
-        android:textColor="?attr/secondaryTextColor"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/currentTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView18"
-        android:layout_below="@+id/textView18"
-        android:layout_marginTop="37dp"
-        android:textColor="?attr/secondaryTextColor"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/intervalTime"
-        android:layout_alignStart="@+id/currentTask"
-        android:textColor="?attr/secondaryTextColor"
-        android:textSize="20sp"
-        android:layout_marginBottom="35dp"
-        android:text="Interval Time:" />
-
-    <TextView
-        android:id="@+id/intervalTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="117dp"
+        android:layout_below="@+id/total_time_left_title"
+        android:layout_marginTop="25dp"
         android:textColor="?attr/secondaryTextColor"
-        android:text="TextView" />
+        android:textSize="@dimen/large_text_size"
+        android:text="@string/default_total_time_left" />
+
+    <TextView
+        android:id="@+id/current_task_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/total_time_left_default"
+        android:layout_marginTop="50dp"
+        android:text="@string/current_task_title_textview"
+        android:textColor="?attr/secondaryTextColor"
+        android:textSize="@dimen/very_large_text_size" />
+
+    <TextView
+        android:id="@+id/current_task_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/current_task_title"
+        android:layout_marginTop="25dp"
+        android:textColor="?attr/secondaryTextColor"
+        android:text="Break Time!"
+        android:textSize="@dimen/very_large_text_size"/>
+
+    <TextView
+        android:id="@+id/interval_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_task_default"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textColor="?attr/secondaryTextColor"
+        android:textSize="@dimen/very_large_text_size"
+        android:text="@string/interval_time_title_textview" />
+
+    <TextView
+        android:id="@+id/interval_time_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interval_time_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="?attr/secondaryTextColor"
+        android:text="@string/default_timer_start_value"
+        android:textSize="@dimen/large_text_size"/>
 
 </RelativeLayout>

@@ -70,7 +70,7 @@ public class HistoryActivity extends AppCompatActivity {
             if (user.size() > 5)
             {
                 TextView Date1 = findViewById(R.id.row_1_date);
-                String text = " " + user.get(s1-1).date;
+                String text = "" + user.get(s1-1).date;
                 Date1.setText(text);
                 TextView length1 = findViewById(R.id.row_1_length);
                 String text2 = user.get(s1-1).length + "";
