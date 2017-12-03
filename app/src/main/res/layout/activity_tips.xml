@@ -9,9 +9,11 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/iconpencil"/>
+        android:src="@drawable/tip1"
+        android:scaleType="fitXY"/>
 
     <TextView
+        android:id="@+id/tip_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -25,7 +27,8 @@
         android:text="@string/tip1"
         android:textColor="?attr/secondaryTextColor"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/tip_title1"
+        android:layout_marginTop="420dp"
         android:textSize="@dimen/very_large_text_size"
         android:textAlignment="center"/>
 
