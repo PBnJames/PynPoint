@@ -3,25 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory>
         <Preference/>
-        <CheckBoxPreference
+       <!-- <CheckBoxPreference
             android:title="Quit button enabled"
             android:key="enablequitbutton"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
+            -->
         <CheckBoxPreference
             android:title="Tutorial on Start"
             android:key="enabletutorial"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
+        <!--
         <CheckBoxPreference
             android:title="Hide Timer"
             android:key="disabletimer"
             android:summaryOff="Disabled"
             android:summaryOn="Enabled"
             android:defaultValue="false" />
-<!--
         <CheckBoxPreference
             android:title="Games Enabled"
             android:key="enable_games"

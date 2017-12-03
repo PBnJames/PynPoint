@@ -7,11 +7,21 @@
     tools:context="com.example.android.pynpoint.TimerStartActivity">
 
 
+
+    <TextView
+        android:id="@+id/timer_start_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="?attr/secondaryTextColor"
+        android:text="@string/timer_start_title_textview"
+        android:textSize="40sp"/>
+
+
     <TextView
         android:id="@+id/total_time_left_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textColor="?attr/secondaryTextColor"

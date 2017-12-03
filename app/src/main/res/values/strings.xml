@@ -89,6 +89,7 @@ http://docs.oracle.com/javase/8/docs/api/index.html</string>
     <string name="interval_time_title_textview"><u>Interval Time:</u></string>
     <string name="default_timer_start_value">Hours:99 Minutes:59 Seconds:59</string>
     <string name="default_total_time_left">Hours:99 Minutes:59</string>
+    <string name="timer_start_title_textview">Timer</string>
 
 
     <string-array name="study_pattern_list">
