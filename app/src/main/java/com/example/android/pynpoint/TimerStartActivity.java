@@ -112,12 +112,12 @@ public class TimerStartActivity extends AppCompatActivity {
             Date currentTime = Calendar.getInstance().getTime();
             final String date=""+ currentTime;
 
-            if (users.size()<2) {
+           /* if (users.size()<2) {
                 database.userDao().addUser(new User(0, "" + 1 + " h " + 20 + " m", "" + "Dec 03 2017", "20", "" + "80"));
                 database.userDao().addUser(new User(2, "" + 2 + " h " + 30 + " m", "" + "Dec 03 2017", "100", "" + "60"));
                 database.userDao().addUser(new User(1, "" + 3 + " h " + 0 + " m", "" + "Dec 03 2017", "60", "" + "120"));
                 database.userDao().addUser(new User(3, "" + 2 + " h " + 0 + " m", "" + "Dec 03 2017", "50", "" + "100"));
-            }
+            }*/
             int x = users.size() + 1;
                 final int y=x;
 

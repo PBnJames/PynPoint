@@ -143,7 +143,7 @@ public class HistoryActivity extends AppCompatActivity {
             else
             {
                 TextView Date1 = findViewById(R.id.row_1_date);
-                String text = " " + user.get(0).date;
+                String text = "" + user.get(0).date;
                 Date1.setText(text);
                 TextView length1 = findViewById(R.id.row_1_length);
                 String text2 = user.get(0).length + "";
